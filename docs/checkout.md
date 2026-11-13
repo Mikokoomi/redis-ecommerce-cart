@@ -21,7 +21,7 @@ Nhấn ảnh/tên sản phẩm để mở /#product/SP001. Giỏ tại /#cart, m
 - order:{order_id}: Hash order_id, user_id, total_vnd, status=CONFIRMED_DEMO, created_at (UTC ISO 8601).
 - order:{order_id}:items: Hash field product_id, value JSON gồm product_id, product_name, quantity, unit_price_vnd, subtotal_vnd.
 - checkout:request:{sha256([user_id,idempotency_key])}: String order_id, giữ kết quả chống trùng.
-- Đơn, items và mã chống trùng không đặt TTL. Chính sách giỏ vẫn 1800 giây. Không trừ kho khi thay đổi giỏ, kể cả số lượng vượt kho; chỉ giới hạn 0–99.
+- Đơn, items và mã chống trùng không đặt TTL. Chính sách giỏ vẫn 86400 giây (24 giờ). Không trừ kho khi thay đổi giỏ, kể cả số lượng vượt kho; chỉ giới hạn 0–99.
 
 ## Nguyên tử và chống trùng
 

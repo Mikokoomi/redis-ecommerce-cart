@@ -2,6 +2,7 @@
 import argparse
 from redis.exceptions import RedisError
 from .redis_client import create_redis_client
+from .config import CART_TTL_SECONDS
 
 CATEGORIES = {
     "dien-thoai": ["Điện thoại Nova A15", "Điện thoại Nova S24", "Điện thoại Lumi 12", "Điện thoại Lumi Pro"],
@@ -52,7 +53,7 @@ def seed(db, carts=False, update=False):
                             break
                         pipe.multi()
                         pipe.hset(key, mapping={f"SP{index+1:03}": 2, f"SP{index+5:03}": 1})
-                        pipe.expire(key, 1800)
+                        pipe.expire(key, CART_TTL_SECONDS)
                         pipe.execute()
                         cart_counts["created"] += 1
                         break

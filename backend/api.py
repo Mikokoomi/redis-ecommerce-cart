@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field, ConfigDict
 from redis.exceptions import WatchError
 from .redis_client import create_redis_client
+from .config import CART_TTL_SECONDS
 from .checkout import checkout, read_order
 from typing import Literal
 import json
@@ -88,7 +89,7 @@ def mutate(db, user_id, pid, quantity, increment=False):
                     pipe.hset(key, pid, amount)
                 else:
                     pipe.hdel(key, pid)
-                pipe.expire(key, 1800)
+                pipe.expire(key, CART_TTL_SECONDS)
                 pipe.execute()
                 return cart(db, user_id)
             except WatchError:
@@ -108,7 +109,7 @@ def remove(user_id: str, product_id: str, db=Depends(database)):
     key = "cart:" + user_id
     with db.pipeline(transaction=True) as pipe:
         pipe.hdel(key, product_id)
-        pipe.expire(key, 1800)
+        pipe.expire(key, CART_TTL_SECONDS)
         pipe.execute()
     return cart(db, user_id)
 

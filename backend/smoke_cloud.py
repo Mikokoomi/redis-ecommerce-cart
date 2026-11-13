@@ -50,7 +50,7 @@ def main():
             check(c.delete(p+"/items/SP002"), {"SP001":4})
             check(c.get(p), {"SP001":4})
             assert db.type(key) == "hash"
-            assert 1700 < db.ttl(key) <= 1800
+            assert 86300 < db.ttl(key) <= 86400
             check(c.delete(p), {})
             assert not db.exists(key)
             print("Cloud CRUD, totals, reload, Hash, TTL, cleanup: OK")
@@ -63,7 +63,7 @@ def main():
         try:
             db.delete(key)
         except RedisError:
-            print("Không thể xác nhận cleanup; giỏ thử có TTL tối đa 1800 giây.")
+            print("Không thể xác nhận cleanup; giỏ thử có TTL tối đa 24 giờ.")
         db.close()
 
 

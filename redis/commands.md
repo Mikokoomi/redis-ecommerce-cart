@@ -1,6 +1,6 @@
 # Kiểm tra trong Another Redis Desktop Manager
 
-Sau khi seed, refresh database 0. Dùng bộ lọc product:* để xem 20 Hash; products:* để xem 1 Set toàn bộ và 5 Set danh mục; cart:* để xem giỏ. Giỏ mẫu sẽ tự hết hạn sau 1800 giây. HLEN là số loại sản phẩm, tổng số lượng phải cộng các value.
+Sau khi seed, refresh database 0. Dùng bộ lọc product:* để xem 20 Hash; products:* để xem 1 Set toàn bộ và 5 Set danh mục; cart:* để xem giỏ. Giỏ mẫu sẽ tự hết hạn sau 86400 giây (24 giờ). HLEN là số loại sản phẩm, tổng số lượng phải cộng các value.
 
 Các lệnh đọc:
 ```redis
@@ -19,7 +19,7 @@ Các lệnh minh họa ghi, chỉ chạy khi chủ động demo trên cart:manua
 HSET cart:manual SP001 2 SP005 1
 HINCRBY cart:manual SP001 1
 HGETALL cart:manual
-EXPIRE cart:manual 1800
+EXPIRE cart:manual 86400
 TTL cart:manual
 HDEL cart:manual SP005
 DEL cart:manual

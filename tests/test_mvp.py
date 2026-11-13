@@ -32,7 +32,7 @@ def test_seed_preserves(setup):
     db.hset("cart:demo","SP001",9)
     assert seed(db,carts=True)["carts"]["skipped"] == 4
     assert db.hget("cart:demo","SP001") == "9"
-    assert 0 < db.ttl("cart:demo") <= 1800
+    assert 86300 < db.ttl("cart:demo") <= 86400
     assert seed(db,update=True)["products"]["updated"] == 20
 
 def test_products(setup):
@@ -53,7 +53,7 @@ def test_cart_flow(setup):
     assert d["total_vnd"] == 22500000
     db.expire("cart:test",5)
     assert c.patch(path+"/items/SP001",json={"quantity":8}).json()["total_quantity"] == 8
-    assert 1700 < db.ttl("cart:test") <= 1800
+    assert 86300 < db.ttl("cart:test") <= 86400
     assert c.get(path).json()["total_quantity"] == 8
     assert c.patch(path+"/items/SP001",json={"quantity":0}).json()["items"] == []
     c.post(path+"/items",json={"product_id":"SP001","quantity":1})

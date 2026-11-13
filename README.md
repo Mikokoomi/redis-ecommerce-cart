@@ -61,7 +61,7 @@ Mở http://127.0.0.1:8000/; tài liệu API tại /docs; kiểm tra /health và
 | DELETE | /api/cart/{user_id}/items/{product_id} | Xóa sản phẩm |
 | DELETE | /api/cart/{user_id} | Xóa giỏ |
 
-Quantity là số nguyên 0–99; 0 xóa sản phẩm. Giá luôn lấy từ Hash sản phẩm. Thay đổi giỏ làm mới TTL 1800 giây; giỏ trống không có key. Mỗi giỏ độc lập theo user_id. Đây là demo không có đăng nhập, không dùng user_id làm cơ chế bảo mật.
+Quantity là số nguyên 0–99; 0 xóa sản phẩm. Giá luôn lấy từ Hash sản phẩm. Thay đổi giỏ làm mới TTL 86400 giây (24 giờ); giỏ trống không có key. Mỗi giỏ độc lập theo user_id. Đây là demo không có đăng nhập, không dùng user_id làm cơ chế bảo mật.
 
 ## Kiểm thử
 ```powershell
@@ -70,7 +70,7 @@ Quantity là số nguyên 0–99; 0 xóa sản phẩm. Giá luôn lấy từ Has
 ```
 fakeredis chỉ dùng trong kiểm thử; không ghi vào Cloud. Xem docs/test-cases.md để biết kết quả và giới hạn kiểm thử.
 
-Đã xác nhận Redis Cloud: 20 sản phẩm, 5 danh mục, 4 giỏ mẫu tại thời điểm seed. Giỏ tự hết hạn sau 1800 giây. Pytest: 12 passed, 0 failed, 1 warning. CRUD Cloud và các thao tác giỏ cơ bản qua trình duyệt đã chạy thành công.
+Đã xác nhận Redis Cloud: 20 sản phẩm, 5 danh mục, 4 giỏ mẫu tại thời điểm seed. Giỏ tự hết hạn sau 86400 giây (24 giờ). Pytest: 12 passed, 0 failed, 1 warning. CRUD Cloud và các thao tác giỏ cơ bản qua trình duyệt đã chạy thành công.
 
 Để chạy lại kiểm thử tích hợp chủ động, mở server ở cổng 8017 rồi chạy:
 

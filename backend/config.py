@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
+CART_TTL_SECONDS = 24 * 60 * 60
+
 
 def redis_settings():
     host = os.getenv("REDIS_HOST", "").strip()
