@@ -1,0 +1,5 @@
+# Minh họa thủ công; dùng python -m backend.seed --carts để seed đầy đủ.
+HSET cart:manual SP001 2 SP005 1
+EXPIRE cart:manual 1800
+HGETALL cart:manual
+TTL cart:manual

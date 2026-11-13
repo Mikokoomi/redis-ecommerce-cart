@@ -1,0 +1,28 @@
+{
+  "SP002": {
+    "image_url": "https://i02.appmifile.com/201_operator_sg/11/01/2024/64678266600f8b06f6e6217efa095556.png",
+    "source_page": "https://www.mi.com/vn/product/redmi-note-13/specs/",
+    "reason": "Nguồn JSON không phân giải DNS; thay bằng ảnh trên trang chính hãng."
+  },
+  "SP011": {
+    "image_url": "https://cdn.shopify.com/s/files/1/0609/8154/3047/files/A3004Z11_TD01_V1_3840x.jpg?v=1721705058",
+    "source_page": "https://www.soundcore.com/vn/products/q20i-a3004z11",
+    "reason": "Nguồn JSON trả 403; thay bằng ảnh Q20i của hãng."
+  },
+  "SP019": {
+    "image_url": "https://cdn.shopify.com/s/files/1/0614/8109/1153/files/A2331111_TD_01.png?v=1720583092&width=1600",
+    "crop": [240, 570, 1370, 1560],
+    "source_page": "https://www.anker.com/vn/products/a2331",
+    "reason": "Nguồn JSON trả 403; thay bằng ảnh Anker 323 của hãng."
+  },
+  "SP017": {
+    "image_url": "https://resource.logitech.com/w_1000,h_1000,c_pad,q_auto,f_auto/d_transparent.gif/content/dam/logitech/en/products/mice/m330-wireless-silent-mouse/2024-update/gallery/m330-wireless-mouse-top-view-black-gallery-01.png",
+    "source_page": "https://www.logitech.com/vi-vn/shop/p/m331-silent-plus-mouse.910-004914",
+    "reason": "Dùng ảnh gallery do trang hãng M331 cung cấp thay nguồn bên thứ ba."
+  },
+  "SP020": {
+    "image_url": "https://www.ugreen.com/cdn/shop/files/d0a9824bf408d4d39de70224bbafb22d.png?v=1762322082&width=1000",
+    "source_page": "https://www.ugreen.com/products/usa-15495",
+    "reason": "Thay ảnh marketing bằng ảnh sản phẩm chính trên cùng trang hãng."
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "catalog_name": "RedisCart - 20 san pham cong nghe co that",
+  "catalog_version": "2026-11-14",
+  "currency": "VND",
+  "pricing_note": "Gia duoc dat de minh hoa nghiep vu gio hang. Day KHONG PHAI bao gia ban le hien hanh, khong nen ghi la gia duoc xac minh.",
+  "image_notice": "Anh la anh san pham do nha san xuat / nha ban le cong bo; can kiem tra quyen su dung truoc khi phat hanh cong khai. Nen tai anh ve frontend/static/images/products, Redis chi luu duong dan anh.",
+  "categories": ["Điện thoại", "Laptop", "Tai nghe", "Đồng hồ", "Phụ kiện"],
+  "products": [
+    {
+      "id": "SP001", "name": "Samsung Galaxy A16 5G 8GB/128GB", "brand": "Samsung", "model": "Galaxy A16 5G", "category": "Điện thoại",
+      "price_vnd": 4990000, "stock_demo": 24,
+      "description": "Điện thoại 5G với màn hình Super AMOLED 6,7 inch và bộ nhớ 128GB, thích hợp học tập và giải trí.",
+      "specs": {"screen": "6,7 inch Super AMOLED", "storage": "128GB", "ram": "8GB", "connectivity": "5G"},
+      "manufacturer_url": "https://www.samsung.com/vn/smartphones/galaxy-a/galaxy-a16-5g-blue-black-128gb-sm-a166pzkdxxv/buy/",
+      "image_url": "https://cuahangsamsung.vn/filemanager/userfiles/hinh-san-pham/a16/5g/1.jpg",
+      "image_source_page": "https://cuahangsamsung.vn/shop/product/samsung-galaxy-a16-5g-8gb-128gb",
+      "image_local": "/static/images/products/SP001.jpg"
+    },
+    {
+      "id": "SP002", "name": "Xiaomi Redmi Note 13 8GB/128GB", "brand": "Xiaomi", "model": "Redmi Note 13", "category": "Điện thoại",
+      "price_vnd": 4190000, "stock_demo": 19,
+      "description": "Redmi Note 13 có màn hình AMOLED 120Hz, thiết kế mỏng và camera chính độ phân giải cao.",
+      "specs": {"screen": "AMOLED 120Hz", "main_camera": "108MP", "battery": "5000mAh", "storage": "128GB"},
+      "manufacturer_url": "https://www.mi.com/vn/product/redmi-note-13/specs/",
+      "image_url": "https://mi-home.ro/cdn/shop/files/14013_Redmi_Note_13-blue-1-1600px.png?v=1705925358&width=1946",
+      "image_source_page": "https://mi-home.ro/products/redmi-note-13",
+      "image_local": "/static/images/products/SP002.png"
+    },
+    {
+      "id": "SP003", "name": "OPPO A60 8GB/256GB", "brand": "OPPO", "model": "OPPO A60", "category": "Điện thoại",
+      "price_vnd": 5390000, "stock_demo": 20,
+      "description": "OPPO A60 với thiết kế xanh gợn sóng, màn hình sáng và sạc nhanh, dành cho nhu cầu sử dụng hằng ngày.",
+      "specs": {"storage": "256GB", "ram": "8GB", "battery": "5000mAh", "charging": "45W SUPERVOOC"},
+      "manufacturer_url": "https://www.oppo.com/vn/smartphones/series-a/a60/specs/",
+      "image_url": "https://object.pscloud.io/cms/cms/Photo/img_0_77_6016_0_6_RLPyFQ.png",
+      "image_source_page": "https://www.sulpak.kz/g/smartfoniy-oppo-a60-8256gb-ripple-blue/tekeli",
+      "image_local": "/static/images/products/SP003.png"
+    },
+    {
+      "id": "SP004", "name": "Apple iPhone 15 128GB", "brand": "Apple", "model": "iPhone 15", "category": "Điện thoại",
+      "price_vnd": 13990000, "stock_demo": 15,
+      "description": "iPhone 15 với Dynamic Island, cổng USB-C, chip A16 Bionic và camera chính 48MP.",
+      "specs": {"screen": "6,1 inch Super Retina XDR", "main_camera": "48MP", "chip": "A16 Bionic", "storage": "128GB"},
+      "manufacturer_url": "https://support.apple.com/vi-vn/111831",
+      "image_url": "https://cdn.mediamart.vn/images/product/apple-iphone-15-128gb-hong_34e6a626.png",
+      "image_source_page": "https://mediamart.vn/apple-iphone-15-128gb-hong",
+      "image_local": "/static/images/products/SP004.png"
+    },
+    {
+      "id": "SP005", "name": "Lenovo IdeaPad Slim 3 15IRH8", "brand": "Lenovo", "model": "IdeaPad Slim 3 15IRH8", "category": "Laptop",
+      "price_vnd": 13990000, "stock_demo": 13,
+      "description": "Laptop 15,6 inch hướng đến học sinh, sinh viên và công việc văn phòng; cấu hình cụ thể phụ thuộc mã SKU.",
+      "specs": {"screen_class": "15,6 inch", "model_family": "IdeaPad Slim 3 15IRH8", "usage": "Học tập, văn phòng"},
+      "manufacturer_url": "https://psref.lenovo.com/Product/IdeaPad/IdeaPad_Slim_3_15IRH8",
+      "image_url": "https://donicelectronics.com/cdn/shop/files/IdeaPad_Slim_3_15IRH8_CT1_04.jpg?v=1762410711",
+      "image_source_page": "https://donicelectronics.com/",
+      "image_local": "/static/images/products/SP005.jpg"
+    },
+    {
+      "id": "SP006", "name": "ASUS Vivobook 15 X1504", "brand": "ASUS", "model": "Vivobook 15 X1504", "category": "Laptop",
+      "price_vnd": 12990000, "stock_demo": 12,
+      "description": "Dòng laptop Vivobook 15 màn hình 15,6 inch Full HD, phù hợp học tập và xử lý tài liệu.",
+      "specs": {"screen": "15,6 inch Full HD", "panel": "Chống chói", "model_family": "X1504"},
+      "manufacturer_url": "https://www.asus.com/vn/laptops/for-home/vivobook/asus-vivobook-15-x1504/techspec/",
+      "image_url": "https://dlcdnwebimgs.asus.com/gain/0dea7490-edcd-4bfb-80e4-0324085f46fc/",
+      "image_source_page": "https://www.asus.com/tw/laptops/for-home/vivobook/asus-vivobook-15-x1504/shop/",
+      "image_local": "/static/images/products/SP006.jpg"
+    },
+    {
+      "id": "SP007", "name": "Acer Aspire 5 A515-58P-51M3", "brand": "Acer", "model": "A515-58P-51M3", "category": "Laptop",
+      "price_vnd": 14990000, "stock_demo": 11,
+      "description": "Laptop Acer Aspire 5 thiết kế truyền thống với màn hình 15 inch, phục vụ học tập và văn phòng.",
+      "specs": {"screen_class": "15 inch", "series": "Aspire 5", "sku": "A515-58P-51M3"},
+      "manufacturer_url": "https://store.acer.com/en-us/aspire-5-laptop-a515-58p-51m3",
+      "image_url": "https://static-ecpa.acer.com/media/catalog/product/a/c/acer-aspire-5-a515-58p-non-fingerprint-non-backlit-wallpaper-steel-gray-01-1000x1000_nx.khjaa.001.png",
+      "image_source_page": "https://store.acer.com/en-us/aspire-5-laptop-a515-58p-51m3",
+      "image_local": "/static/images/products/SP007.png"
+    },
+    {
+      "id": "SP008", "name": "Dell Inspiron 15 3530", "brand": "Dell", "model": "Inspiron 15 3530", "category": "Laptop",
+      "price_vnd": 15990000, "stock_demo": 10,
+      "description": "Laptop Dell Inspiron 15 có màn hình 15,6 inch Full HD; tùy chọn màn hình 120Hz theo SKU.",
+      "specs": {"screen": "15,6 inch Full HD", "model_family": "3530", "usage": "Học tập, làm việc"},
+      "manufacturer_url": "https://www.dell.com/en-us/shop/cty/pdp/spd/inspiron-15-3530-laptop",
+      "image_url": "https://vpem.vn/uploads/2176/images/z4479561083771_b5f25e00d8ef8e3878a23a0001fbda31.jpg",
+      "image_source_page": "https://vpem.vn/laptop-dell-inspiron-15-3530-i3-1305u-ram-8gb-512gb-ssd-120hz-windows-11-office-n3530-i3u085w11blu-.html",
+      "image_local": "/static/images/products/SP008.jpg"
+    },
+    {
+      "id": "SP009", "name": "JBL Tune 520BT", "brand": "JBL", "model": "Tune 520BT", "category": "Tai nghe",
+      "price_vnd": 1090000, "stock_demo": 33,
+      "description": "Tai nghe chụp tai không dây với âm thanh JBL Pure Bass và thời lượng pin dài.",
+      "specs": {"connection": "Bluetooth", "battery": "Tối đa 57 giờ", "design": "On-ear"},
+      "manufacturer_url": "https://vn.jbl.com/over-ear-headphones/TUNE520BT.html",
+      "image_url": "https://shop.ncsu.edu/Product%20Images/JBL520Wireless_media-01.jpg",
+      "image_source_page": "https://shop.ncsu.edu/JBL-Tune-520BT-Wireless-On-Ear-Headphones",
+      "image_local": "/static/images/products/SP009.jpg"
+    },
+    {
+      "id": "SP010", "name": "Sony WH-CH520", "brand": "Sony", "model": "WH-CH520", "category": "Tai nghe",
+      "price_vnd": 1190000, "stock_demo": 30,
+      "description": "Tai nghe Bluetooth on-ear gọn nhẹ, pin lên đến 50 giờ và hỗ trợ kết nối đa điểm.",
+      "specs": {"connection": "Bluetooth", "battery": "Tối đa 50 giờ", "design": "On-ear"},
+      "manufacturer_url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch520/specifications",
+      "image_url": "https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dwc5323103/images/WHCH520L/WHCH520L.png",
+      "image_source_page": "https://store.sony.com.au/headphones-bluetooth/WHCH520L.html",
+      "image_local": "/static/images/products/SP010.png"
+    },
+    {
+      "id": "SP011", "name": "Soundcore Q20i", "brand": "Soundcore", "model": "Q20i", "category": "Tai nghe",
+      "price_vnd": 1290000, "stock_demo": 25,
+      "description": "Tai nghe over-ear có chống ồn chủ động hybrid và chế độ xuyên âm, dùng cho làm việc hoặc di chuyển.",
+      "specs": {"noise_control": "Hybrid ANC", "design": "Over-ear", "connection": "Bluetooth"},
+      "manufacturer_url": "https://www.soundcore.com/vn/products/q20i-a3004z11",
+      "image_url": "https://v2cdn.boutiqaat.com/media/catalog/product/I/-/I-00000204292-6.jpg",
+      "image_source_page": "https://www.boutiqaat.com/en-sa/men/soundcore-q20i-white-i-00000204292-1/p/",
+      "image_local": "/static/images/products/SP011.jpg"
+    },
+    {
+      "id": "SP012", "name": "Apple AirPods (thế hệ 3)", "brand": "Apple", "model": "AirPods 3", "category": "Tai nghe",
+      "price_vnd": 3290000, "stock_demo": 16,
+      "description": "Tai nghe true wireless với chip H1, âm thanh không gian và thời lượng nghe đến 6 giờ mỗi lần sạc.",
+      "specs": {"chip": "Apple H1", "battery": "Tối đa 6 giờ", "type": "True wireless"},
+      "manufacturer_url": "https://support.apple.com/vi-vn/111863",
+      "image_url": "https://www.tadbuy.com/27647/apple-airpods-3-3a-generacion-con-caja-de-carga-magsafe-1-audifonos-apple.jpg",
+      "image_source_page": "https://www.tadbuy.com/audifonos/5797-apple-airpods-3-3a-generacion-con-caja-de-carga-magsafe-1-audifonos-apple-7502079970916.html",
+      "image_local": "/static/images/products/SP012.jpg"
+    },
+    {
+      "id": "SP013", "name": "Samsung Galaxy Watch6 Bluetooth 40mm", "brand": "Samsung", "model": "Galaxy Watch6", "category": "Đồng hồ",
+      "price_vnd": 4190000, "stock_demo": 18,
+      "description": "Đồng hồ Wear OS với màn hình Super AMOLED 1,3 inch, theo dõi sức khỏe và Bluetooth 5.3.",
+      "specs": {"case": "40mm", "screen": "1,3 inch Super AMOLED", "connection": "Bluetooth 5.3", "battery": "300mAh"},
+      "manufacturer_url": "https://www.samsung.com/vn/business/watches/galaxy-watch/galaxy-watch6-40mm-graphite-bluetooth-sm-r930nzkaxxv/",
+      "image_url": "https://samsung-akinon.a-cdn.akinoncdn.com/products/2023/07/21/18230/f0519b3e-da2f-49bd-9de7-c202ee000287.jpg",
+      "image_source_page": "https://shop.samsung.com/tr/galaxy-watch6-bluetooth-40mm/",
+      "image_local": "/static/images/products/SP013.jpg"
+    },
+    {
+      "id": "SP014", "name": "Apple Watch SE (thế hệ 2) GPS 40mm", "brand": "Apple", "model": "Apple Watch SE 2", "category": "Đồng hồ",
+      "price_vnd": 4990000, "stock_demo": 13,
+      "description": "Đồng hồ thông minh Apple Watch SE thế hệ 2, theo dõi hoạt động và hỗ trợ nhiều tính năng an toàn.",
+      "specs": {"case": "40mm", "connectivity": "GPS", "generation": "2"},
+      "manufacturer_url": "https://support.apple.com/vi-vn/111853",
+      "image_url": "https://rauvang.com/data/Product/mplq3ref-vw-34frwatch-40-alum-starlight-nc-se-vw-34fr-wf-co.htm_1663384417.jpeg",
+      "image_source_page": "https://rauvang.com/chi-tiet/1111-apple-watch-se-gen-2-gps-40mm-starlight-aluminum-case-with-sport-band.htm",
+      "image_local": "/static/images/products/SP014.jpeg"
+    },
+    {
+      "id": "SP015", "name": "Xiaomi Redmi Watch 4", "brand": "Xiaomi", "model": "Redmi Watch 4", "category": "Đồng hồ",
+      "price_vnd": 1890000, "stock_demo": 27,
+      "description": "Đồng hồ màn hình AMOLED lớn 1,97 inch, có theo dõi luyện tập và nhiều chế độ thể thao.",
+      "specs": {"screen": "1,97 inch AMOLED", "body": "Khung hợp kim nhôm", "battery": "470mAh"},
+      "manufacturer_url": "https://www.mi.com/vn/product/redmi-watch-4/specs/",
+      "image_url": "https://static1.nordic.pictures/45869497-thickbox_default/xiaomi-redmi-watch-4-obsidian-black.jpg",
+      "image_source_page": "https://www.photopoint.ee/en/sports-watches/4401178-xiaomi-redmi-watch-4-obsidian-black",
+      "image_local": "/static/images/products/SP015.jpg"
+    },
+    {
+      "id": "SP016", "name": "HUAWEI WATCH FIT 3", "brand": "HUAWEI", "model": "WATCH FIT 3", "category": "Đồng hồ",
+      "price_vnd": 2790000, "stock_demo": 17,
+      "description": "Đồng hồ thể thao mặt chữ nhật, màn hình AMOLED 1,82 inch và hỗ trợ theo dõi vận động.",
+      "specs": {"screen": "1,82 inch AMOLED", "weight": "Khoảng 26g (không dây)", "water_resistance": "5 ATM"},
+      "manufacturer_url": "https://consumer.huawei.com/ie/wearables/watch-fit3/specs/",
+      "image_url": "https://ennap.com/cdn/shop/files/800_800_44337A32F7D691E83D5B0E62D0777C07mp.png?v=1718822874&width=1946",
+      "image_source_page": "https://ennap.com/ar/products/huawei-watch-fit-3",
+      "image_local": "/static/images/products/SP016.png"
+    },
+    {
+      "id": "SP017", "name": "Logitech M331 Silent Plus", "brand": "Logitech", "model": "M331", "category": "Phụ kiện",
+      "price_vnd": 390000, "stock_demo": 42,
+      "description": "Chuột không dây Logitech M331 với nút bấm êm và thiết kế ôm tay.",
+      "specs": {"connection": "USB receiver 2,4GHz", "feature": "SilentTouch", "type": "Chuột không dây"},
+      "manufacturer_url": "https://www.logitech.com/vi-vn/shop/p/m331-silent-plus-mouse.910-004914",
+      "image_url": "https://rukmini1.flixcart.com/image/1500/1500/xif0q/mouse/x/w/w/m331-silent-plus-1000-dpi-optical-tracking-logitech-enriched-transparent-original-imah3w7faw8sjj2f.png?q=90",
+      "image_source_page": "https://pricehistory.app/p/logitech-m331-silent-plus-ambidextrous-optical-mouse-oCF6jwyp",
+      "image_local": "/static/images/products/SP017.png"
+    },
+    {
+      "id": "SP018", "name": "Logitech Pebble Keys 2 K380s", "brand": "Logitech", "model": "K380s", "category": "Phụ kiện",
+      "price_vnd": 890000, "stock_demo": 36,
+      "description": "Bàn phím Bluetooth nhỏ gọn, phím tròn và hỗ trợ chuyển đổi thiết bị.",
+      "specs": {"connection": "Bluetooth", "type": "Bàn phím không dây", "feature": "Easy-Switch"},
+      "manufacturer_url": "https://gaming.logitech.com/en-us/shop/p/pebble-keys-2.920-011775",
+      "image_url": "https://resource.logitech.com/e_trim/w_700%2Ch_600%2Cc_pad%2Cq_auto%2Cf_auto%2Cdpr_1.0/b_white/content/dam/logitech/en/products/keyboards/pebble-keys-2-k380s/gallery/pebble-keys-2-k380s-top-tonal-graphite-gallery-us.png",
+      "image_source_page": "https://www.logitech.com/en-us/shop/o/keyboard-gifts",
+      "image_local": "/static/images/products/SP018.png"
+    },
+    {
+      "id": "SP019", "name": "Anker 323 Charger 33W", "brand": "Anker", "model": "A2331", "category": "Phụ kiện",
+      "price_vnd": 490000, "stock_demo": 49,
+      "description": "Củ sạc Anker 323 công suất tối đa 33W với hai cổng sạc.",
+      "specs": {"max_power": "33W", "ports": "2", "type": "Củ sạc"},
+      "manufacturer_url": "https://www.anker.com/vn/products/a2331",
+      "image_url": "https://cdn.taw9eel.com/media/catalog/product/cache/1/image/519x/9df78eab33525d08d6e5fb8d27136e95/a/2/a2331k11-en.jpg",
+      "image_source_page": "https://www.taw9eel.com/en/anker-323-charger-33w-black.html",
+      "image_local": "/static/images/products/SP019.jpg"
+    },
+    {
+      "id": "SP020", "name": "UGREEN Revodok 105 5-in-1 USB-C Hub", "brand": "UGREEN", "model": "15495 / Revodok 105", "category": "Phụ kiện",
+      "price_vnd": 690000, "stock_demo": 39,
+      "description": "Bộ chia cổng USB-C có HDMI 4K/30Hz, USB-A và cổng USB-C cấp nguồn PD.",
+      "specs": {"hdmi": "4K@30Hz", "charging": "PD 100W", "ports": "5"},
+      "manufacturer_url": "https://www.ugreen.com/products/usa-15495",
+      "image_url": "https://www.ugreen.com/cdn/shop/files/71iUGjCNJvL_f837f67e-eb41-477c-a3e0-3834cdb3eb1a.jpg?v=1772096325&width=1445",
+      "image_source_page": "https://www.ugreen.com/products/usa-15495",
+      "image_local": "/static/images/products/SP020.jpg"
+    }
+  ]
+}

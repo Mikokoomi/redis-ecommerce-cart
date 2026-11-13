@@ -1,0 +1,408 @@
+{
+  "SP001": {
+    "status": "ok",
+    "name": "Samsung Galaxy A16 5G 8GB/128GB",
+    "url": "https://cuahangsamsung.vn/filemanager/userfiles/hinh-san-pham/a16/5g/1.jpg",
+    "resolved_url": "https://cuahangsamsung.vn/filemanager/userfiles/hinh-san-pham/a16/5g/1.jpg",
+    "source_page": "https://cuahangsamsung.vn/shop/product/samsung-galaxy-a16-5g-8gb-128gb",
+    "manufacturer_url": "https://www.samsung.com/vn/smartphones/galaxy-a/galaxy-a16-5g-blue-black-128gb-sm-a166pzkdxxv/buy/",
+    "content_type": "image/jpeg",
+    "original_size": [
+      1200,
+      1200
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 41480,
+    "sha256": "2975a223f1011f841ea2e1ab3ccae2f1903c2de8319ff980a6c88d9dc8712427",
+    "local": "/assets/images/products/SP001.webp"
+  },
+  "SP002": {
+    "status": "ok",
+    "name": "Xiaomi Redmi Note 13 8GB/128GB",
+    "url": "https://i02.appmifile.com/201_operator_sg/11/01/2024/64678266600f8b06f6e6217efa095556.png",
+    "resolved_url": "https://i02.appmifile.com/201_operator_sg/11/01/2024/64678266600f8b06f6e6217efa095556.png",
+    "source_page": "https://www.mi.com/vn/product/redmi-note-13/specs/",
+    "manufacturer_url": "https://www.mi.com/vn/product/redmi-note-13/specs/",
+    "content_type": "image/png",
+    "original_size": [
+      1200,
+      600
+    ],
+    "size": [
+      1000,
+      500
+    ],
+    "bytes": 25062,
+    "sha256": "ffbe139105e817a05debe17102dcb2228c23be44b68c3f680bcb5aabdb7d69a1",
+    "local": "/assets/images/products/SP002.webp"
+  },
+  "SP003": {
+    "status": "ok",
+    "name": "OPPO A60 8GB/256GB",
+    "url": "https://object.pscloud.io/cms/cms/Photo/img_0_77_6016_0_6_RLPyFQ.png",
+    "resolved_url": "https://object.pscloud.io/cms/cms/Photo/img_0_77_6016_0_6_RLPyFQ.png",
+    "source_page": "https://www.sulpak.kz/g/smartfoniy-oppo-a60-8256gb-ripple-blue/tekeli",
+    "manufacturer_url": "https://www.oppo.com/vn/smartphones/series-a/a60/specs/",
+    "content_type": "image/png",
+    "original_size": [
+      512,
+      512
+    ],
+    "size": [
+      512,
+      512
+    ],
+    "bytes": 18172,
+    "sha256": "10021006108f1698770ec8a9d0878419225b6cf20a17c80b138aabaf9e352714",
+    "local": "/assets/images/products/SP003.webp"
+  },
+  "SP004": {
+    "status": "ok",
+    "name": "Apple iPhone 15 128GB",
+    "url": "https://cdn.mediamart.vn/images/product/apple-iphone-15-128gb-hong_34e6a626.png",
+    "resolved_url": "https://cdn.mediamart.vn/images/product/apple-iphone-15-128gb-hong_34e6a626.png",
+    "source_page": "https://mediamart.vn/apple-iphone-15-128gb-hong",
+    "manufacturer_url": "https://support.apple.com/vi-vn/111831",
+    "content_type": "image/png",
+    "original_size": [
+      600,
+      600
+    ],
+    "size": [
+      600,
+      600
+    ],
+    "bytes": 18256,
+    "sha256": "46c6ef043550ce957cf4585154b4a7fd7977c25da1fbbaa4745f454d71add31b",
+    "local": "/assets/images/products/SP004.webp"
+  },
+  "SP005": {
+    "status": "ok",
+    "name": "Lenovo IdeaPad Slim 3 15IRH8",
+    "url": "https://donicelectronics.com/cdn/shop/files/IdeaPad_Slim_3_15IRH8_CT1_04.jpg?v=1762410711",
+    "resolved_url": "https://donicelectronics.com/cdn/shop/files/IdeaPad_Slim_3_15IRH8_CT1_04.jpg?v=1762410711",
+    "source_page": "https://donicelectronics.com/",
+    "manufacturer_url": "https://psref.lenovo.com/Product/IdeaPad/IdeaPad_Slim_3_15IRH8",
+    "content_type": "image/jpeg",
+    "original_size": [
+      2000,
+      2000
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 30494,
+    "sha256": "cfdb445311ce42d1161a74c19e1df69d25d76aa49a8906082563c8e46524e97f",
+    "local": "/assets/images/products/SP005.webp"
+  },
+  "SP006": {
+    "status": "ok",
+    "name": "ASUS Vivobook 15 X1504",
+    "url": "https://dlcdnwebimgs.asus.com/gain/0dea7490-edcd-4bfb-80e4-0324085f46fc/",
+    "resolved_url": "https://dlcdnwebimgs.asus.com/gain/0dea7490-edcd-4bfb-80e4-0324085f46fc/",
+    "source_page": "https://www.asus.com/tw/laptops/for-home/vivobook/asus-vivobook-15-x1504/shop/",
+    "manufacturer_url": "https://www.asus.com/vn/laptops/for-home/vivobook/asus-vivobook-15-x1504/techspec/",
+    "content_type": "image/png",
+    "original_size": [
+      2400,
+      2400
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 22902,
+    "sha256": "28db82ab8d5794dd9afdd40875d95af46e52846af810cba28f18328160030ba8",
+    "local": "/assets/images/products/SP006.webp"
+  },
+  "SP007": {
+    "status": "ok",
+    "name": "Acer Aspire 5 A515-58P-51M3",
+    "url": "https://static-ecpa.acer.com/media/catalog/product/a/c/acer-aspire-5-a515-58p-non-fingerprint-non-backlit-wallpaper-steel-gray-01-1000x1000_nx.khjaa.001.png",
+    "resolved_url": "https://static-ecpa.acer.com/media/catalog/product/a/c/acer-aspire-5-a515-58p-non-fingerprint-non-backlit-wallpaper-steel-gray-01-1000x1000_nx.khjaa.001.png",
+    "source_page": "https://store.acer.com/en-us/aspire-5-laptop-a515-58p-51m3",
+    "manufacturer_url": "https://store.acer.com/en-us/aspire-5-laptop-a515-58p-51m3",
+    "content_type": "image/png",
+    "original_size": [
+      1000,
+      1000
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 50652,
+    "sha256": "c1c3d51c3b4d45c0dee7d059b6b6c426f8486121a8d8eff9b3aba77d95ea9685",
+    "local": "/assets/images/products/SP007.webp"
+  },
+  "SP008": {
+    "status": "ok",
+    "name": "Dell Inspiron 15 3530",
+    "url": "https://vpem.vn/uploads/2176/images/z4479561083771_b5f25e00d8ef8e3878a23a0001fbda31.jpg",
+    "resolved_url": "https://vpem.vn/uploads/2176/images/z4479561083771_b5f25e00d8ef8e3878a23a0001fbda31.jpg",
+    "source_page": "https://vpem.vn/laptop-dell-inspiron-15-3530-i3-1305u-ram-8gb-512gb-ssd-120hz-windows-11-office-n3530-i3u085w11blu-.html",
+    "manufacturer_url": "https://www.dell.com/en-us/shop/cty/pdp/spd/inspiron-15-3530-laptop",
+    "content_type": "image/jpg",
+    "original_size": [
+      4095,
+      2717
+    ],
+    "size": [
+      1000,
+      663
+    ],
+    "bytes": 67842,
+    "sha256": "49324b58bdf27241175782be77873091413b76cbc68bd40256a66fac3373386f",
+    "local": "/assets/images/products/SP008.webp"
+  },
+  "SP009": {
+    "status": "ok",
+    "name": "JBL Tune 520BT",
+    "url": "https://shop.ncsu.edu/Product%20Images/JBL520Wireless_media-01.jpg",
+    "resolved_url": "https://shop.ncsu.edu/Product%20Images/JBL520Wireless_media-01.jpg",
+    "source_page": "https://shop.ncsu.edu/JBL-Tune-520BT-Wireless-On-Ear-Headphones",
+    "manufacturer_url": "https://vn.jbl.com/over-ear-headphones/TUNE520BT.html",
+    "content_type": "image/jpeg",
+    "original_size": [
+      1500,
+      1500
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 41124,
+    "sha256": "152289290f6131847fd8bcfd1e3886ba7a49d315af174942a38887de2f5ff113",
+    "local": "/assets/images/products/SP009.webp"
+  },
+  "SP010": {
+    "status": "ok",
+    "name": "Sony WH-CH520",
+    "url": "https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dwc5323103/images/WHCH520L/WHCH520L.png",
+    "resolved_url": "https://store.sony.com.au/on/demandware.static/-/Sites-sony-master-catalog/default/dwc5323103/images/WHCH520L/WHCH520L.png",
+    "source_page": "https://store.sony.com.au/headphones-bluetooth/WHCH520L.html",
+    "manufacturer_url": "https://www.sony.com/electronics/support/wireless-headphones-bluetooth-headphones/wh-ch520/specifications",
+    "content_type": "image/png",
+    "original_size": [
+      1000,
+      1000
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 21740,
+    "sha256": "e9af6a71d331392e94313ec8f702fe0a1d443dd0170cde9a3cccf93c78b8fe3c",
+    "local": "/assets/images/products/SP010.webp"
+  },
+  "SP011": {
+    "status": "ok",
+    "name": "Soundcore Q20i",
+    "url": "https://cdn.shopify.com/s/files/1/0609/8154/3047/files/A3004Z11_TD01_V1_3840x.jpg?v=1721705058",
+    "resolved_url": "https://cdn.shopify.com/s/files/1/0609/8154/3047/files/A3004Z11_TD01_V1_3840x.jpg?v=1721705058",
+    "source_page": "https://www.soundcore.com/vn/products/q20i-a3004z11",
+    "manufacturer_url": "https://www.soundcore.com/vn/products/q20i-a3004z11",
+    "content_type": "image/jpeg",
+    "original_size": [
+      1500,
+      1500
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 39262,
+    "sha256": "421d87f254876ba9fcf20faa5bf123bfd59cdbb193f7720d170733a6078ba382",
+    "local": "/assets/images/products/SP011.webp"
+  },
+  "SP012": {
+    "status": "ok",
+    "name": "Apple AirPods (thế hệ 3)",
+    "url": "https://www.tadbuy.com/27647/apple-airpods-3-3a-generacion-con-caja-de-carga-magsafe-1-audifonos-apple.jpg",
+    "resolved_url": "https://www.tadbuy.com/27647/apple-airpods-3-3a-generacion-con-caja-de-carga-magsafe-1-audifonos-apple.jpg",
+    "source_page": "https://www.tadbuy.com/audifonos/5797-apple-airpods-3-3a-generacion-con-caja-de-carga-magsafe-1-audifonos-apple-7502079970916.html",
+    "manufacturer_url": "https://support.apple.com/vi-vn/111863",
+    "content_type": "image/jpeg",
+    "original_size": [
+      2000,
+      2000
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 18560,
+    "sha256": "54b2007cdc844fb969df1d928ec1bc8491bc7f83e6ccdc80fbd41b40afe04467",
+    "local": "/assets/images/products/SP012.webp"
+  },
+  "SP013": {
+    "status": "ok",
+    "name": "Samsung Galaxy Watch6 Bluetooth 40mm",
+    "url": "https://samsung-akinon.a-cdn.akinoncdn.com/products/2023/07/21/18230/f0519b3e-da2f-49bd-9de7-c202ee000287.jpg",
+    "resolved_url": "https://samsung-akinon.a-cdn.akinoncdn.com/products/2023/07/21/18230/f0519b3e-da2f-49bd-9de7-c202ee000287.jpg",
+    "source_page": "https://shop.samsung.com/tr/galaxy-watch6-bluetooth-40mm/",
+    "manufacturer_url": "https://www.samsung.com/vn/business/watches/galaxy-watch/galaxy-watch6-40mm-graphite-bluetooth-sm-r930nzkaxxv/",
+    "content_type": "image/jpeg",
+    "original_size": [
+      3000,
+      3000
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 32976,
+    "sha256": "1bb67bc844a3182c36874d8fb86c9a5be05134939a9e1701d13aa01df6eb1778",
+    "local": "/assets/images/products/SP013.webp"
+  },
+  "SP014": {
+    "status": "ok",
+    "name": "Apple Watch SE (thế hệ 2) GPS 40mm",
+    "url": "https://rauvang.com/data/Product/mplq3ref-vw-34frwatch-40-alum-starlight-nc-se-vw-34fr-wf-co.htm_1663384417.jpeg",
+    "resolved_url": "https://rauvang.com/data/Product/mplq3ref-vw-34frwatch-40-alum-starlight-nc-se-vw-34fr-wf-co.htm_1663384417.jpeg",
+    "source_page": "https://rauvang.com/chi-tiet/1111-apple-watch-se-gen-2-gps-40mm-starlight-aluminum-case-with-sport-band.htm",
+    "manufacturer_url": "https://support.apple.com/vi-vn/111853",
+    "content_type": "image/jpeg",
+    "original_size": [
+      1400,
+      1400
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 36888,
+    "sha256": "2f55636639de264e46c971ebea67edda218794d163f098a174699bcecbd09c10",
+    "local": "/assets/images/products/SP014.webp"
+  },
+  "SP015": {
+    "status": "ok",
+    "name": "Xiaomi Redmi Watch 4",
+    "url": "https://static1.nordic.pictures/45869497-thickbox_default/xiaomi-redmi-watch-4-obsidian-black.jpg",
+    "resolved_url": "https://static1.nordic.pictures/45869497-thickbox_default/xiaomi-redmi-watch-4-obsidian-black.jpg",
+    "source_page": "https://www.photopoint.ee/en/sports-watches/4401178-xiaomi-redmi-watch-4-obsidian-black",
+    "manufacturer_url": "https://www.mi.com/vn/product/redmi-watch-4/specs/",
+    "content_type": "image/jpeg",
+    "original_size": [
+      800,
+      800
+    ],
+    "size": [
+      800,
+      800
+    ],
+    "bytes": 36210,
+    "sha256": "bb2fd4a991caaeb89f07c4fb2e57a2b3ad721f87ddeedfc3835ace385571186e",
+    "local": "/assets/images/products/SP015.webp"
+  },
+  "SP016": {
+    "status": "ok",
+    "name": "HUAWEI WATCH FIT 3",
+    "url": "https://ennap.com/cdn/shop/files/800_800_44337A32F7D691E83D5B0E62D0777C07mp.png?v=1718822874&width=1946",
+    "resolved_url": "https://ennap.com/cdn/shop/files/800_800_44337A32F7D691E83D5B0E62D0777C07mp.png?v=1718822874&width=1946",
+    "source_page": "https://ennap.com/ar/products/huawei-watch-fit-3",
+    "manufacturer_url": "https://consumer.huawei.com/ie/wearables/watch-fit3/specs/",
+    "content_type": "image/png",
+    "original_size": [
+      800,
+      800
+    ],
+    "size": [
+      800,
+      800
+    ],
+    "bytes": 39854,
+    "sha256": "8a4e92d9289cf0b14484b37f5fee832df3c9aa6d3634dba865cb4552dbedaf27",
+    "local": "/assets/images/products/SP016.webp"
+  },
+  "SP017": {
+    "status": "ok",
+    "name": "Logitech M331 Silent Plus",
+    "url": "https://resource.logitech.com/w_1000,h_1000,c_pad,q_auto,f_auto/d_transparent.gif/content/dam/logitech/en/products/mice/m330-wireless-silent-mouse/2024-update/gallery/m330-wireless-mouse-top-view-black-gallery-01.png",
+    "resolved_url": "https://resource.logitech.com/w_1000,h_1000,c_pad,q_auto,f_auto/d_transparent.gif/content/dam/logitech/en/products/mice/m330-wireless-silent-mouse/2024-update/gallery/m330-wireless-mouse-top-view-black-gallery-01.png",
+    "source_page": "https://www.logitech.com/vi-vn/shop/p/m331-silent-plus-mouse.910-004914",
+    "manufacturer_url": "https://www.logitech.com/vi-vn/shop/p/m331-silent-plus-mouse.910-004914",
+    "content_type": "image/png",
+    "original_size": [
+      1000,
+      1000
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 21348,
+    "sha256": "ff60b77e9d8cc5fe35c7df27b7193ec6c3987e303b4a78738ce07368661d8288",
+    "local": "/assets/images/products/SP017.webp"
+  },
+  "SP018": {
+    "status": "ok",
+    "name": "Logitech Pebble Keys 2 K380s",
+    "url": "https://resource.logitech.com/e_trim/w_700%2Ch_600%2Cc_pad%2Cq_auto%2Cf_auto%2Cdpr_1.0/b_white/content/dam/logitech/en/products/keyboards/pebble-keys-2-k380s/gallery/pebble-keys-2-k380s-top-tonal-graphite-gallery-us.png",
+    "resolved_url": "https://resource.logitech.com/e_trim/w_700%2Ch_600%2Cc_pad%2Cq_auto%2Cf_auto%2Cdpr_1.0/b_white/content/dam/logitech/en/products/keyboards/pebble-keys-2-k380s/gallery/pebble-keys-2-k380s-top-tonal-graphite-gallery-us.png",
+    "source_page": "https://www.logitech.com/en-us/shop/o/keyboard-gifts",
+    "manufacturer_url": "https://gaming.logitech.com/en-us/shop/p/pebble-keys-2.920-011775",
+    "content_type": "image/jpeg",
+    "original_size": [
+      700,
+      600
+    ],
+    "size": [
+      700,
+      600
+    ],
+    "bytes": 25060,
+    "sha256": "c2e6d8bb35eeb44de9bc6c7b2064de529a984a94ea4e73605faebacc1a5f6e5f",
+    "local": "/assets/images/products/SP018.webp"
+  },
+  "SP019": {
+    "status": "ok",
+    "name": "Anker 323 Charger 33W",
+    "url": "https://cdn.shopify.com/s/files/1/0614/8109/1153/files/A2331111_TD_01.png?v=1720583092&width=1600",
+    "resolved_url": "https://cdn.shopify.com/s/files/1/0614/8109/1153/files/A2331111_TD_01.png?v=1720583092&width=1600",
+    "source_page": "https://www.anker.com/vn/products/a2331",
+    "manufacturer_url": "https://www.anker.com/vn/products/a2331",
+    "content_type": "image/png",
+    "original_size": [
+      1600,
+      2000
+    ],
+    "size": [
+      1000,
+      876
+    ],
+    "crop": [
+      240,
+      570,
+      1370,
+      1560
+    ],
+    "bytes": 26318,
+    "sha256": "23d99b10189032339d7f4d7608d5110a17b52f610caa8dd2f67d21bf9d45774a",
+    "local": "/assets/images/products/SP019.webp"
+  },
+  "SP020": {
+    "status": "ok",
+    "name": "UGREEN Revodok 105 5-in-1 USB-C Hub",
+    "url": "https://www.ugreen.com/cdn/shop/files/d0a9824bf408d4d39de70224bbafb22d.png?v=1762322082&width=1000",
+    "resolved_url": "https://www.ugreen.com/cdn/shop/files/d0a9824bf408d4d39de70224bbafb22d.png?v=1762322082&width=1000",
+    "source_page": "https://www.ugreen.com/products/usa-15495",
+    "manufacturer_url": "https://www.ugreen.com/products/usa-15495",
+    "content_type": "image/png",
+    "original_size": [
+      1000,
+      1000
+    ],
+    "size": [
+      1000,
+      1000
+    ],
+    "bytes": 50200,
+    "sha256": "d179f36706d15123c325f8dc4ef714abd896fc8d42f39e0a04b2517fdbb91738",
+    "local": "/assets/images/products/SP020.webp"
+  }
+}
