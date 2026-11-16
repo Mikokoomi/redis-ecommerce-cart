@@ -1,5 +1,7 @@
 # Redis E-Commerce Cart
 
+Branch feature/redis-updates đã bổ sung session authentication cho tất cả API giỏ, checkout, mua ngay và đơn. URL user_id phải khớp phiên đăng nhập; chưa đăng nhập trả 401. Giao diện tài khoản dùng cookie hiện có. Xem docs/redis-security-review.md để biết data model, key dictionary, truy vấn Hash/Set/Sorted Set/Stream/TTL và hướng dẫn quản trị an toàn. TTL giỏ hiện là 24 giờ.
+
 Catalogue hiện tại đã nhập từ real_tech_catalog_for_codex/products_real_20.json: 20 model thật, 5 danh mục, 20 ảnh WebP cục bộ. Giá trong file là giá minh họa, không phải báo giá thị trường đã xác minh. Chi tiết thao tác và kết quả tại docs/catalog-import.md; nguồn ảnh tại docs/product-image-sources.md.
 
 Để nhập lại (giữ nguyên stock và dữ liệu giỏ/đơn):

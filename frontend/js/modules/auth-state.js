@@ -60,6 +60,10 @@ export function bindAuth(onChange) {
       $('#subtotal').textContent = '0 ₫';
       $('#total').textContent = '0 ₫';
       $('#checkout-open').disabled = true;
+      $('#checkout-review').textContent = '';
+      $('#order-content').textContent = '';
+      $('#cart-description').textContent = '';
+      $('#clear-dialog').close();
 
       if (state.user) message('');
 

@@ -264,7 +264,9 @@ window.addEventListener(
     setPasswordVisible(false);
   }
 
+  let authRevision = 0;
   function showUser(user) {
+    authRevision++;
     $('auth-open').hidden = Boolean(user);
     $('auth-user').hidden = !user;
     $('auth-username').textContent = user ? user.name : '';
@@ -356,5 +358,9 @@ window.addEventListener(
     }
   });
 
-  callAuth('me').then(showUser).catch(() => showUser(null));
+  callAuth('me').then(user => {
+    if (authRevision === 0) showUser(user);
+  }).catch(() => {
+    if (authRevision === 0) showUser(null);
+  });
 })();

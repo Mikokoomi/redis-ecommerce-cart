@@ -7,6 +7,9 @@ from .checkout import checkout, read_order
 from typing import Literal
 import json
 
+from .auth import cart_owner
+from .cart_activity import activity, watch_activity
+
 router = APIRouter(prefix="/api")
 
 def database():
@@ -55,10 +58,10 @@ class BuyNowRequest(CheckoutRequest):
     product_id: str = Field(pattern=r"^SP[0-9]{3}$")
     quantity: int = Field(ge=1, le=99, strict=True)
 
-@router.post("/cart/{user_id}/checkout")
+@router.post("/cart/{user_id}/checkout", dependencies=[Depends(cart_owner)])
 def confirm_checkout(user_id: str, request: CheckoutRequest, db=Depends(database)):
     return checkout(db, user_id, request.idempotency_key)
-@router.post("/cart/{user_id}/buy-now")
+@router.post("/cart/{user_id}/buy-now", dependencies=[Depends(cart_owner)])
 def confirm_buy_now(
     user_id: str,
     request: BuyNowRequest,
@@ -74,7 +77,7 @@ def confirm_buy_now(
         }
     )
 
-@router.get("/cart/{user_id}/orders/{order_id}")
+@router.get("/cart/{user_id}/orders/{order_id}", dependencies=[Depends(cart_owner)])
 def order_detail(user_id: str, order_id: str, db=Depends(database)):
     return read_order(db, order_id, user_id)
 
@@ -87,7 +90,7 @@ def products(category: str | None = None, db=Depends(database)):
 def detail(product_id: str, db=Depends(database)):
     return product(db, product_id)
 
-@router.get("/cart/{user_id}")
+@router.get("/cart/{user_id}", dependencies=[Depends(cart_owner)])
 def get_cart(user_id: str, db=Depends(database)):
     return cart(db, user_id)
 
@@ -98,6 +101,7 @@ def mutate(db, user_id, pid, quantity, increment=False):
         with db.pipeline() as pipe:
             try:
                 pipe.watch(key)
+                watch_activity(pipe)
                 amount = quantity + int(pipe.hget(key, pid) or 0) if increment and quantity else quantity
                 if amount > 99:
                     raise HTTPException(422, "Tối đa 99 đơn vị mỗi sản phẩm.")
@@ -108,47 +112,40 @@ def mutate(db, user_id, pid, quantity, increment=False):
                     pipe.hdel(key, pid)
                 pipe.expire(key, CART_TTL_SECONDS)
 
-                pipe.xadd(
-                    "events:cart",
-                    {
-                        "action": (
-                            "remove" if amount == 0
-                            else "add" if increment
-                            else "update"
-                        ),
-                        "user_id": user_id,
-                        "product_id": pid,
-                        "quantity": str(amount)
-                    },
-                    maxlen=1000,
-                    approximate=True
-                )
-
+                activity(pipe, user_id, "remove" if amount == 0 else "add" if increment else "update", pid, amount)
                 pipe.execute()
                 return cart(db, user_id)
             except WatchError:
                 continue
     raise HTTPException(409, "Giỏ hàng đang thay đổi. Vui lòng thử lại.")
 
-@router.post("/cart/{user_id}/items")
+@router.post("/cart/{user_id}/items", dependencies=[Depends(cart_owner)])
 def add(user_id: str, item: Item, db=Depends(database)):
     return mutate(db, user_id, item.product_id, item.quantity, True)
 
-@router.patch("/cart/{user_id}/items/{product_id}")
+@router.patch("/cart/{user_id}/items/{product_id}", dependencies=[Depends(cart_owner)])
 def update(user_id: str, product_id: str, item: Quantity, db=Depends(database)):
     return mutate(db, user_id, product_id, item.quantity)
 
-@router.delete("/cart/{user_id}/items/{product_id}")
+@router.delete("/cart/{user_id}/items/{product_id}", dependencies=[Depends(cart_owner)])
 def remove(user_id: str, product_id: str, db=Depends(database)):
     key = "cart:" + user_id
     with db.pipeline(transaction=True) as pipe:
+        watch_activity(pipe)
+        pipe.multi()
         pipe.hdel(key, product_id)
         pipe.expire(key, CART_TTL_SECONDS)
+        activity(pipe, user_id, "remove", product_id, 0)
         pipe.execute()
     return cart(db, user_id)
 
-@router.delete("/cart/{user_id}")
+@router.delete("/cart/{user_id}", dependencies=[Depends(cart_owner)])
 def clear(user_id: str, db=Depends(database)):
-    db.delete("cart:" + user_id)
+    with db.pipeline(transaction=True) as pipe:
+        watch_activity(pipe)
+        pipe.multi()
+        pipe.delete("cart:" + user_id)
+        activity(pipe, user_id, "clear", remove=True)
+        pipe.execute()
     return cart(db, user_id)
 

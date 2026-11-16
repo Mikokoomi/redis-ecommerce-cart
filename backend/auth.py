@@ -2,7 +2,7 @@
 """Registration and cookie-based login for RedisCart.
 
 Step 1: Authentication only.
-Existing cart APIs are not protected yet.
+Private APIs use this session dependency.
 """
 
 from datetime import datetime, timezone
@@ -121,10 +121,10 @@ def _login_session(
 
     raw_token = secrets.token_urlsafe(32)
 
-    db.setex(
+    db.set(
         _session_key(raw_token),
-        SESSION_TTL_SECONDS,
-        user_id
+        user_id,
+        ex=SESSION_TTL_SECONDS
     )
 
     response.set_cookie(
@@ -165,6 +165,12 @@ def current_user(
         )
 
     return _public_user(user)
+
+
+def cart_owner(user_id: str, user=Depends(current_user)):
+    if user_id != user["user_id"]:
+        raise HTTPException(403, "Bạn không có quyền truy cập dữ liệu này.")
+    return user
 
 @router.post("/register", status_code=201)
 def register(

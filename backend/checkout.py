@@ -6,6 +6,7 @@ from uuid import uuid4
 
 from fastapi import HTTPException
 from redis.exceptions import WatchError
+from .cart_activity import activity, watch_activity
 
 
 def read_order(db, order_id, user_id):
@@ -48,6 +49,7 @@ def checkout(db, user_id, request_key, direct_item=None):
                 if previous:
                     pipe.unwatch()
                     return read_order(db, previous, user_id)
+                watch_activity(pipe)
 
                 if pipe.exists(order_key) or pipe.exists(items_key):
                     raise HTTPException(
@@ -162,6 +164,10 @@ def checkout(db, user_id, request_key, direct_item=None):
                 # Mua ngay giu nguyen gio hang.
                 if not is_buy_now:
                     pipe.delete(cart_key)
+                if is_buy_now:
+                    pipe.xadd("events:cart", {"action": "buy_now", "user_id": user_id}, maxlen=1000, approximate=False)
+                else:
+                    activity(pipe, user_id, "checkout", remove=True)
 
                 pipe.execute()
 

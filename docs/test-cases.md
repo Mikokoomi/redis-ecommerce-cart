@@ -1,5 +1,7 @@
 # Kiểm thử MVP
 
+Cập nhật feature/redis-updates: **62 passed, 0 failed, 1 warning, 6.84 giây**. Kiểm tra session/ownership trên cả 8 tuyến riêng tư, phục hồi giỏ, đổi tài khoản, mua ngay không xóa giỏ, checkout, idempotency, đồng thời, Stream giới hạn 1000 và Sorted Set dọn chỉ mục hết hạn. Chi tiết tại redis-security-review.md. Kiểm tra HTTP live: sản phẩm 200, giỏ chưa đăng nhập 401. Chưa kiểm thử browser trong lượt này.
+
 Sau nhập catalogue thật: **46 passed, 0 failed, 1 warning, 1.31 giây**. Thêm kiểm thử dry-run không ghi, backup đúng namespace, import lặp lại, giữ stock=0/stock thay đổi đồng thời, không thay đổi giỏ/đơn, kiểu dữ liệu sai và xác minh 20 WebP. Cloud smoke đạt trên sản phẩm/giỏ dùng một lần; stock riêng 5→2, gửi lại không trừ lần hai; 5 key thử đã dọn. API trả 20 sản phẩm, 5 danh mục và 20 ảnh HTTP 200. Chi tiết tại catalog-import.md.
 
 Lần chạy sau bổ sung checkout: **29 passed, 0 failed, 1 warning, 0.89 giây**. Cú pháp Python và JavaScript hợp lệ. Kiểm thử mua mô phỏng dùng fakeredis; không trừ kho trên Cloud. Chi tiết tại checkout.md. Server Cloud sau cập nhật: /health và /health/redis trả 200, OpenAPI có endpoint checkout.
