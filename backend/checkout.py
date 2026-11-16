@@ -105,12 +105,13 @@ def checkout(db, user_id, request_key, direct_item=None):
                             f"Dữ liệu sản phẩm {pid} không hợp lệ."
                         )
 
+                    
                     if stock < q:
                         raise HTTPException(
                             409,
-                            f"{p.get('name', pid)} không đủ hàng: "
-                            f"còn {stock}, cần {q}."
+                            f"{p.get('name', pid)} ({pid}) không đủ hàng: còn {stock}, cần {q}."
                         )
+
 
                     stocks[pid] = stock - q
 
