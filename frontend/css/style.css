@@ -45,3 +45,1174 @@
 @media(max-width:600px){.cart-heading{align-items:flex-start}.cart-heading h1{font-size:24px}.cart-heading .clear-button{padding:8px;font-size:11px}.back-link{margin:20px 0}.cart-heading>div{min-width:0}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 
+/* ========================================
+   REDISCART - THANH TIM KIEM MOI
+   ======================================== */
+
+header .header-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 78px;
+}
+
+header .main-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+header #search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 1 350px;
+  width: auto;
+  min-width: 190px;
+  max-width: 660px;
+  height: 52px;
+  margin: 0;
+  padding: 5px;
+  gap: 0;
+  border: 1px solid #e2e5eb;
+  border-radius: 12px;
+  background: #f7f8fa;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+header #search-form:focus-within {
+  background: #fff;
+  border-color: #d53a46;
+  box-shadow: 0 0 0 4px rgba(211, 46, 59, 0.08);
+}
+
+header #search-form > svg {
+  position: static;
+  transform: none;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0 12px 0 11px;
+  color: #8691a2;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+header #search-form #search {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-size: 13px;
+  color: #202735;
+}
+
+header #search-form #search:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+header #search-form #search::placeholder {
+  color: #97a0ae;
+}
+
+header #search-form .search-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 96px;
+  height: 40px;
+  padding: 0 15px;
+  margin: 0;
+  border: none;
+  border-radius: 9px;
+  background: #ce2934;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+header #search-form .search-submit:hover {
+  background: #ae1f2b;
+}
+
+header .cart-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+  header .header-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  header #search-form {
+    order: 5;
+    flex: 1 0 100%;
+    max-width: none;
+  }
+
+  header .cart-link {
+    margin-left: auto;
+  }
+}
+
+/* Dien thoai */
+@media (max-width: 620px) {
+  header .main-nav {
+    display: none;
+  }
+
+  header .cart-link span {
+    display: none;
+  }
+
+  header #search-form {
+    height: 48px;
+  }
+
+  header #search-form .search-submit {
+    height: 36px;
+    min-width: 82px;
+    padding: 0 10px;
+  }
+}
+
+/* ======================================
+   SEARCH BAR - MINIMAL
+   ====================================== */
+
+header #search-form {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 48px;
+  padding: 4px 12px 4px 6px;
+  background: #f7f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: none;
+  transition: border-color .2s, background .2s;
+}
+
+header #search-form:hover {
+  background: #fafafa;
+  border-color: #d4d8df;
+}
+
+header #search-form:focus-within {
+  background: #fff;
+  border-color: #aeb5c0;
+  box-shadow: 0 0 0 3px rgba(20, 30, 50, .04);
+}
+
+/* Icon kinh lup thay nut do */
+header #search-form .search-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #687386;
+  box-shadow: none;
+  cursor: pointer;
+  transition: color .2s, background .2s;
+}
+
+header #search-form .search-submit:hover {
+  color: #202735;
+  background: #e9edf2;
+}
+
+header #search-form .search-submit:active {
+  background: #e1e6ed;
+  transform: none;
+}
+
+header #search-form .search-submit:focus-visible {
+  outline: 2px solid #8c95a3;
+  outline-offset: 1px;
+}
+
+header #search-form .search-submit svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+/* O nhap tim kiem */
+header #search-form #search {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 4px;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #202735;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+header #search-form #search:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+header #search-form #search::placeholder {
+  color: #949ba7;
+  opacity: 1;
+}
+
+@media (max-width: 620px) {
+  header #search-form {
+    height: 46px;
+  }
+
+  header #search-form .search-submit {
+    flex-basis: 38px;
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+  }
+}
+
+/* ==========================================
+   REDISCART - PRODUCT DETAIL STORE STYLE
+   ========================================== */
+
+#detail-view {
+  padding-bottom: 32px;
+}
+
+#detail-view #detail-content.detail-layout {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+#detail-view > .back-link {
+  display: inline-flex;
+  align-items: center;
+  margin: 24px 0 10px;
+  color: #687386;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#detail-view > .back-link:hover {
+  color: #c92d38;
+}
+
+.rd-product {
+  color: #172033;
+}
+
+.rd-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #8992a0;
+}
+
+.rd-breadcrumb a {
+  color: #687386;
+  text-decoration: none;
+}
+
+.rd-breadcrumb a:hover {
+  color: #c92d38;
+}
+
+.rd-breadcrumb [aria-current="page"] {
+  color: #313b4b;
+  font-weight: 600;
+}
+
+/* Bo cuc anh + mua hang */
+
+.rd-product-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: start;
+  gap: 22px;
+}
+
+.rd-product-media,
+.rd-product-purchase,
+.rd-description-card,
+.rd-specifications-card {
+  min-width: 0;
+  border: 1px solid #e8ebf0;
+  border-radius: 16px;
+  background: #fff;
+}
+
+/* Khung anh */
+
+.rd-product-media {
+  overflow: hidden;
+}
+
+.rd-product-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 490px;
+  padding: 30px;
+  background: #f8f9fb;
+}
+
+.rd-product-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 520px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.rd-product-photo-caption {
+  margin: 0;
+  padding: 14px;
+  color: #9098a5;
+  background: #fff;
+  text-align: center;
+  font-size: 11px;
+  border-top: 1px solid #edf0f3;
+}
+
+/* Khung mua hang */
+
+.rd-product-purchase {
+  padding: 28px;
+}
+
+.rd-product-category {
+  margin: 0 0 12px;
+  color: #be2c38;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.rd-product-name {
+  margin: 0 0 16px;
+  color: #172033;
+  font-size: clamp(24px, 2.15vw, 31px);
+  line-height: 1.35;
+  letter-spacing: -0.6px;
+  font-weight: 750;
+}
+
+.rd-product-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  margin-bottom: 22px;
+  color: #778190;
+  font-size: 12px;
+}
+
+.rd-stock {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 650;
+}
+
+.rd-stock.is-available {
+  color: #267d53;
+}
+
+.rd-stock.is-empty {
+  color: #ba2934;
+}
+
+.rd-stock-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Gia ban */
+
+.rd-price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 20px 22px;
+  border: 1px solid #f1e0e2;
+  border-radius: 12px;
+  background: #fdf8f8;
+}
+
+.rd-price-label {
+  color: #777e8b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.rd-price-value {
+  color: #cb2735;
+  font-size: clamp(27px, 2.8vw, 37px);
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Form mua hang */
+
+#detail-content #detail-form.rd-purchase-form {
+  display: block;
+  margin: 0;
+}
+
+.rd-quantity-label {
+  display: block;
+  margin-bottom: 11px;
+  color: #333d4b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.rd-purchase-row {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.rd-quantity {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  height: 52px;
+  overflow: hidden;
+  border: 1px solid #dde2e9;
+  border-radius: 10px;
+  background: #fff;
+}
+
+#detail-content .rd-quantity button {
+  width: 37px;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #394252;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#detail-content .rd-quantity button:hover {
+  background: #f1f3f6;
+}
+
+#detail-content .rd-quantity input {
+  width: 43px;
+  min-width: 43px;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0 2px;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  text-align: center;
+  color: #202735;
+  font-size: 14px;
+  font-weight: 700;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+#detail-content .rd-quantity input::-webkit-inner-spin-button,
+#detail-content .rd-quantity input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Nut them gio hang */
+
+#detail-content .rd-add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 52px;
+  margin: 0;
+  padding: 12px 16px;
+  border: 1px solid #c92936;
+  border-radius: 10px;
+  background: #ce2934;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.18s ease;
+}
+
+#detail-content .rd-add-to-cart:hover {
+  background: #b51f2b;
+}
+
+#detail-content .rd-add-to-cart svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#detail-content .rd-add-to-cart:disabled,
+#detail-content .rd-quantity button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.rd-view-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 17px;
+  color: #b52a36;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.rd-view-cart:hover {
+  text-decoration: underline;
+}
+
+/* Thong tin mua sam */
+
+.rd-service-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 25px;
+  padding-top: 22px;
+  border-top: 1px solid #edf0f3;
+}
+
+.rd-service-notes > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  color: #687386;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.rd-service-notes svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  fill: none;
+  stroke: #6b7788;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Khu vuc mo ta + thong so */
+
+.rd-product-bottom {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 22px;
+  margin-top: 22px;
+  align-items: start;
+}
+
+.rd-description-card,
+.rd-specifications-card {
+  padding: 25px;
+}
+
+.rd-description-card h2,
+.rd-specifications-card .specifications h2 {
+  margin: 0 0 18px;
+  color: #1c2636;
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: 750;
+}
+
+.rd-description-card p {
+  margin: 0;
+  color: #535f6f;
+  font-size: 14px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.rd-specifications-card .specifications {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.rd-specifications-card .specifications dl {
+  display: block;
+  margin: 0;
+}
+
+.rd-specifications-card .specifications dl > div {
+  display: grid;
+  grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0f3;
+  background: none;
+}
+
+.rd-specifications-card .specifications dl > div:last-child {
+  border-bottom: none;
+}
+
+.rd-specifications-card .specifications dt,
+.rd-specifications-card .specifications dd {
+  margin: 0;
+  width: auto;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.rd-specifications-card .specifications dt {
+  color: #778292;
+}
+
+.rd-specifications-card .specifications dd {
+  color: #273142;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.rd-specifications-card .manufacturer-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #b82b38;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.rd-specifications-card .manufacturer-link:hover {
+  text-decoration: underline;
+}
+
+.rd-loading {
+  padding: 70px 0;
+  text-align: center;
+  color: #7a8492;
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .rd-product-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .rd-product-photo {
+    height: 390px;
+  }
+
+  .rd-product-purchase {
+    padding: 20px;
+  }
+
+  .rd-purchase-row {
+    flex-wrap: wrap;
+  }
+
+  #detail-content .rd-add-to-cart {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .rd-product-main,
+  .rd-product-bottom {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .rd-product-photo {
+    height: 330px;
+    padding: 18px;
+  }
+
+  .rd-product-purchase,
+  .rd-description-card,
+  .rd-specifications-card {
+    padding: 19px;
+  }
+
+  .rd-product-name {
+    font-size: 23px;
+  }
+
+  .rd-price-value {
+    font-size: 29px;
+  }
+
+  .rd-purchase-row {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 380px) {
+  .rd-purchase-row {
+    flex-wrap: wrap;
+  }
+
+  #detail-content .rd-add-to-cart {
+    flex-basis: 100%;
+  }
+}
+
+/* ==========================================
+   REDISCART - FOOTER MOI
+   ========================================== */
+
+footer.store-footer {
+  margin-top: 55px;
+  padding: 48px 0 0;
+  background: #fff;
+  border-top: 1px solid #e7eaf0;
+}
+
+footer.store-footer > .container.store-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  align-items: start;
+  gap: 36px;
+}
+
+.store-footer-brand .brand {
+  display: inline-flex;
+  margin-bottom: 16px;
+  font-size: 27px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.store-footer-brand p {
+  max-width: 300px;
+  margin: 0;
+  color: #7a8493;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.store-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.store-footer-column h3 {
+  margin: 0 0 5px;
+  color: #253043;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.store-footer-column a,
+.store-footer-column p {
+  display: block;
+  margin: 0;
+  color: #788292;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.store-footer-column a:hover {
+  color: #c62b38;
+}
+
+footer.store-footer > .container.store-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 45px;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  border-top: 1px solid #edf0f3;
+  color: #9aa2ae;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  footer.store-footer > .container.store-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  footer.store-footer {
+    padding-top: 35px;
+  }
+
+  footer.store-footer > .container.store-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 15px;
+  }
+
+  .store-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  footer.store-footer > .container.store-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+  }
+}
+
+/* =========================================
+   REDISCART - PRODUCT DETAIL POLISH V2
+   ========================================= */
+
+/* Breadcrumb: gon, khong co nut quay lai tho */
+#detail-view .rd-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 20px 0 22px;
+  color: #929ba9;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+#detail-view .rd-breadcrumb a {
+  color: #737d8b;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#detail-view .rd-breadcrumb a:hover {
+  color: #cc2937;
+}
+
+#detail-view .rd-breadcrumb [aria-current="page"] {
+  color: #283244;
+  font-weight: 650;
+}
+
+/* Sale tren anh */
+.rd-product-photo {
+  position: relative;
+}
+
+.rd-photo-sale {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 33px;
+  padding: 6px 13px;
+  color: #fff;
+  background: #cf2432;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 12px rgba(207,36,50,.13);
+}
+
+/* Khu vuc gia ban */
+.rd-price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 13px;
+  padding: 21px 23px;
+  margin-bottom: 17px;
+  border: 1px solid #f0dde0;
+  border-radius: 13px;
+  background: #fff9f9;
+}
+
+.rd-price-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.rd-price-heading .rd-price-label {
+  color: #697485;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.rd-discount-badge {
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #fde8ea;
+  color: #c62935;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.rd-price-amount {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 5px;
+}
+
+.rd-price-amount .rd-price-value {
+  font-size: clamp(29px, 2.7vw, 37px);
+  color: #cc2634;
+  letter-spacing: -0.8px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.rd-original-price {
+  color: #949ba8;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.rd-saving-note {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px dashed #efcdd1;
+  color: #a83942;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Thong so nhanh nhu website ban hang */
+.rd-quick-specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin: 0 0 24px;
+}
+
+.rd-quick-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  padding: 13px 11px;
+  background: #f7f8fa;
+  border: 1px solid #eceef2;
+  border-radius: 9px;
+}
+
+.rd-quick-spec span {
+  color: #8791a0;
+  font-size: 11px;
+}
+
+.rd-quick-spec strong {
+  color: #303b4c;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+/* Nut mua gon, bot sac do trang tri */
+.rd-product-purchase {
+  box-shadow: 0 5px 20px rgba(20, 35, 55, 0.025);
+}
+
+#detail-content .rd-add-to-cart {
+  box-shadow: none;
+  transition: background .18s ease;
+}
+
+#detail-content .rd-add-to-cart:hover {
+  background: #b9212e;
+}
+
+@media (max-width: 1050px) {
+  .rd-quick-specs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .rd-price-box {
+    padding: 17px;
+  }
+
+  .rd-photo-sale {
+    top: 13px;
+    left: 13px;
+  }
+
+  .rd-quick-specs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 430px) {
+  .rd-quick-specs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Hai nut mua hang tren trang chi tiet */
+
+.rd-purchase-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  flex: 1 1 380px;
+  min-width: 0;
+}
+
+#detail-content .rd-buy-now,
+#detail-content .rd-add-to-cart {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+  min-height: 52px;
+  margin: 0;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.2s ease;
+}
+
+/* Nút Mua ngay */
+#detail-content .rd-buy-now {
+  background: #ce2934;
+  color: #fff;
+  border: 1px solid #ce2934;
+}
+
+#detail-content .rd-buy-now:hover {
+  background: #ad202c;
+}
+
+/* Nút Thêm vào giỏ */
+#detail-content .rd-add-to-cart {
+  background: #fff;
+  color: #ce2934;
+  border: 1px solid #ce2934;
+}
+
+#detail-content .rd-add-to-cart:hover {
+  background: #fff3f4;
+}
+
+#detail-content .rd-add-to-cart svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+#detail-content .rd-buy-now:disabled,
+#detail-content .rd-add-to-cart:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Điện thoại */
+@media (max-width: 650px) {
+  .rd-purchase-actions {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .rd-purchase-actions {
+    grid-template-columns: 1fr;
+  }
+}
+

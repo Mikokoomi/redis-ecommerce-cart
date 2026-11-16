@@ -89,4 +89,26 @@ def test_static(setup):
     _,c=setup
     for path in ["/","/health","/css/style.css","/js/app.js","/assets/laptop.svg"]:
         assert c.get(path).status_code == 200
+def test_cart_stream_records_add(setup):
+    db, client = setup
 
+    response = client.post(
+        "/api/cart/streamtest/items",
+        json={
+            "product_id": "SP001",
+            "quantity": 2
+        }
+    )
+
+    assert response.status_code == 200
+
+    events = db.xrevrange("events:cart", count=1)
+
+    assert len(events) == 1
+
+    event = events[0][1]
+
+    assert event["action"] == "add"
+    assert event["user_id"] == "streamtest"
+    assert event["product_id"] == "SP001"
+    assert event["quantity"] == "2"

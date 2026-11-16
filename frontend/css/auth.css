@@ -1,0 +1,1006 @@
+
+/* RedisCart V2 - Giao dien dang nhap hien dai */
+
+.auth-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+#auth-open[hidden],
+#auth-user[hidden] {
+  display: none !important;
+}
+
+#auth-open.auth-open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  background: #fff;
+  color: #c42b2e;
+  border: 1px solid #e8b2b4;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 44px;
+  padding: 10px 15px;
+  transition: background .2s, border-color .2s, transform .2s;
+}
+
+#auth-open.auth-open-btn:hover {
+  background: #fff3f4;
+  border-color: #c42b2e;
+  transform: translateY(-1px);
+}
+
+#auth-open.auth-open-btn svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.9;
+}
+
+.auth-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 260px;
+}
+
+.auth-avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fce8e9;
+  color: #b7282e;
+  font-weight: 750;
+}
+
+.auth-profile-name {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 130px;
+}
+
+#auth-logout.auth-logout-btn {
+  min-height: 38px;
+  padding: 7px 10px;
+  font-size: 12px;
+  color: #555f6e;
+  background: #fff;
+  border: 1px solid #d9dfe7;
+  white-space: nowrap;
+}
+
+#auth-logout.auth-logout-btn:hover {
+  color: #b7282e;
+  background: #fff3f4;
+}
+
+/* Dialog */
+
+#auth-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: min(870px, calc(100vw - 36px));
+  max-width: none;
+  max-height: min(760px, calc(100dvh - 32px));
+  height: auto;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  border-radius: 22px;
+  overflow: auto;
+  color: #1d2330;
+  background: #fff;
+  box-shadow: 0 30px 100px #10131d55;
+  font-family: "Be Vietnam Pro", system-ui, sans-serif;
+}
+
+#auth-dialog::backdrop {
+  background: rgba(13, 18, 27, .72);
+  backdrop-filter: blur(5px);
+}
+
+#auth-dialog .auth-shell {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  margin: 0;
+  gap: 0;
+  align-items: stretch;
+  min-height: 560px;
+}
+
+/* Cot trai */
+
+#auth-dialog .auth-showcase {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 31px 33px;
+  background:
+    radial-gradient(
+      ellipse at 88% 22%,
+      #6d293b 0,
+      transparent 48%
+    ),
+    linear-gradient(
+      145deg,
+      #21222c 0%,
+      #282331 53%,
+      #531c2a 100%
+    );
+  color: #fff;
+}
+
+#auth-dialog .auth-showcase::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  right: -195px;
+  top: 130px;
+  border: 1px solid #ffffff23;
+  box-shadow:
+    0 0 0 60px #ffffff08,
+    0 0 0 120px #ffffff06;
+}
+
+#auth-dialog .auth-showcase-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-size: 23px;
+}
+
+#auth-dialog .auth-brand-mark {
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 10px;
+  background: #df3641;
+}
+
+#auth-dialog .auth-brand-mark svg {
+  width: 26px;
+  height: 26px;
+  color: #fff;
+}
+
+#auth-dialog .auth-brand-name span {
+  color: #f16a76;
+}
+
+#auth-dialog .auth-showcase-tag {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  padding: 7px 11px;
+  border: 1px solid #ffffff25;
+  border-radius: 40px;
+  background: #ffffff12;
+  color: #f7cbd1;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1.2px;
+}
+
+#auth-dialog .auth-showcase-tag span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fb7185;
+}
+
+#auth-dialog .auth-showcase-center {
+  margin-top: 32px;
+}
+
+#auth-dialog .auth-showcase h3 {
+  font-size: clamp(23px, 2.5vw, 31px);
+  line-height: 1.4;
+  letter-spacing: -.9px;
+  font-weight: 700;
+  margin: 17px 0 12px;
+  color: white;
+}
+
+#auth-dialog .auth-showcase h3 em {
+  font-style: normal;
+  color: #ff9da7;
+}
+
+#auth-dialog .auth-showcase p {
+  font-size: 12px;
+  line-height: 1.85;
+  color: #d4ccd4;
+  margin: 0;
+  max-width: 300px;
+}
+
+/* Hinh minh hoa */
+
+#auth-dialog .auth-illustration {
+  height: 190px;
+  position: relative;
+  margin-top: 20px;
+}
+
+#auth-dialog .auth-illustration-glow {
+  position: absolute;
+  left: 30px;
+  right: 10px;
+  bottom: 15px;
+  height: 90px;
+  border-radius: 50%;
+  background: #e1455675;
+  filter: blur(50px);
+}
+
+#auth-dialog .auth-mini-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 178px;
+  height: 128px;
+  padding: 19px;
+  border-radius: 18px;
+  box-shadow: 0 15px 38px #12121d66;
+}
+
+#auth-dialog .auth-mini-card-back {
+  left: 9px;
+  top: 21px;
+  transform: rotate(-11deg);
+  background: linear-gradient(140deg, #b92d43, #e1616d);
+  color: #fff;
+}
+
+#auth-dialog .auth-mini-card-back span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  opacity: .9;
+}
+
+#auth-dialog .auth-mini-card-back strong {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+#auth-dialog .auth-mini-card-back small {
+  font-size: 10px;
+}
+
+#auth-dialog .auth-mini-card-front {
+  left: 97px;
+  top: 45px;
+  transform: rotate(9deg);
+  background: #fff;
+  color: #24222a;
+}
+
+#auth-dialog .auth-mini-icon {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #fff0f1;
+  color: #d02e3f;
+}
+
+#auth-dialog .auth-mini-card-front strong {
+  font-size: 14px;
+}
+
+#auth-dialog .auth-mini-card-front small {
+  font-size: 10px;
+  color: #707481;
+}
+
+#auth-dialog .auth-mini-bars {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+#auth-dialog .auth-mini-bars i {
+  display: block;
+  height: 5px;
+  width: 33px;
+  background: #e94e59;
+  border-radius: 4px;
+}
+
+#auth-dialog .auth-mini-bars i:nth-child(2) {
+  width: 23px;
+  background: #f4b4bb;
+}
+
+#auth-dialog .auth-mini-bars i:nth-child(3) {
+  width: 15px;
+  background: #f5d8dc;
+}
+
+#auth-dialog .auth-showcase-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #d0c2cb;
+}
+
+#auth-dialog .auth-showcase-dot {
+  display: block;
+  background: #f27385;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Cot phai - Form */
+
+#auth-dialog .auth-main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 62px 52px;
+  background: #fff;
+  min-width: 0;
+}
+
+#auth-dialog .auth-close {
+  position: absolute;
+  right: 24px;
+  top: 20px;
+  min-height: 36px;
+  width: 36px;
+  padding: 0;
+  border: 0;
+  background: #f2f4f7;
+  border-radius: 50%;
+  color: #626b79;
+  font-size: 25px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+#auth-dialog .auth-close:hover {
+  color: #c42b2e;
+  background: #ffecef;
+}
+
+#auth-dialog .auth-content {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+#auth-dialog .auth-form-kicker {
+  font-size: 10px;
+  letter-spacing: 1.6px;
+  color: #bc313c;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+#auth-dialog #auth-title {
+  font-size: 28px;
+  line-height: 1.35;
+  letter-spacing: -.8px;
+  color: #202431;
+  margin: 0 0 8px;
+  font-weight: 750;
+}
+
+#auth-dialog #auth-subtitle {
+  color: #7b8290;
+  line-height: 1.8;
+  font-size: 12px;
+  margin: 0 0 27px;
+}
+
+#auth-dialog #auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+#auth-dialog .auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #313747;
+}
+
+#auth-dialog .auth-field[hidden] {
+  display: none;
+}
+
+#auth-dialog .auth-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#auth-dialog .auth-input-wrap > svg {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  stroke: #a2a9b4;
+  pointer-events: none;
+}
+
+#auth-dialog .auth-field input {
+  font: inherit;
+  font-weight: 500;
+  min-height: 50px;
+  width: 100%;
+  border: 1px solid #e2e5ea;
+  border-radius: 11px;
+  background: #f9fafc;
+  color: #222936;
+  padding: 12px 13px 12px 44px;
+  font-size: 13px;
+  outline: 0;
+  transition:
+    border-color .2s,
+    box-shadow .2s,
+    background .2s;
+}
+
+#auth-dialog .auth-field input::placeholder {
+  color: #b3b9c2;
+}
+
+#auth-dialog .auth-field input:focus {
+  background: #fff;
+  border-color: #e36d73;
+  box-shadow: 0 0 0 3px #fbe7e8;
+}
+
+#auth-dialog #auth-password {
+  padding-right: 72px;
+}
+
+#auth-dialog .auth-password-toggle {
+  position: absolute;
+  right: 9px;
+  border: 0;
+  background: transparent;
+  padding: 6px 8px;
+  min-height: 32px;
+  color: #bf3440;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+#auth-dialog .auth-password-toggle:hover {
+  background: #fff0f2;
+}
+
+#auth-dialog #auth-error {
+  color: #b42532;
+  background: #fff2f3;
+  border: 1px solid #f5c9cf;
+  border-radius: 9px;
+  padding: 11px 12px;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+#auth-dialog #auth-error[hidden] {
+  display: none;
+}
+
+#auth-dialog #auth-submit {
+  min-height: 51px;
+  border-radius: 11px;
+  border: 1px solid #cc2d39;
+  color: white;
+  background: linear-gradient(
+    105deg,
+    #d83340 0%,
+    #bd2534 100%
+  );
+  box-shadow: 0 8px 19px #c6313c30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  font-size: 14px;
+  font-weight: 750;
+  margin-top: 3px;
+  transition:
+    transform .18s,
+    box-shadow .18s,
+    filter .18s;
+}
+
+#auth-dialog #auth-submit:hover {
+  transform: translateY(-1px);
+  filter: brightness(.98);
+  box-shadow: 0 11px 23px #c6313c43;
+}
+
+#auth-dialog #auth-submit:disabled {
+  transform: none;
+  opacity: .65;
+}
+
+#auth-dialog #auth-submit > span {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+#auth-dialog .auth-switch-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 22px 0 0;
+  font-size: 12px;
+  color: #777f8e;
+}
+
+#auth-dialog #auth-switch {
+  min-height: auto;
+  border: 0;
+  background: transparent;
+  color: #c42c39;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+#auth-dialog #auth-switch:hover {
+  text-decoration: underline;
+  background: #fff5f6;
+}
+
+#auth-dialog .auth-form-footer {
+  margin-top: 36px;
+  padding-top: 17px;
+  border-top: 1px solid #eef0f3;
+  color: #9ca2ae;
+  text-align: center;
+  font-size: 10px;
+}
+
+#auth-dialog .auth-form-footer > span {
+  color: #d03b47;
+}
+
+/* Responsive tablet */
+
+@media (max-width: 950px) {
+  .header-inner {
+    gap: 14px;
+  }
+
+  .auth-actions {
+    margin-left: 0;
+  }
+}
+
+/* Responsive mobile */
+
+@media (max-width: 740px) {
+  #auth-dialog {
+    width: min(490px, calc(100vw - 24px));
+    max-height: calc(100dvh - 20px);
+    border-radius: 18px;
+  }
+
+  #auth-dialog .auth-shell {
+    display: block;
+    min-height: 0;
+  }
+
+  #auth-dialog .auth-showcase {
+    display: none;
+  }
+
+  #auth-dialog .auth-main {
+    padding: 68px 28px 31px;
+  }
+
+  #auth-dialog #auth-title {
+    font-size: 25px;
+  }
+
+  #auth-dialog .auth-close {
+    right: 18px;
+    top: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth-actions {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .auth-profile-name {
+    display: none;
+  }
+
+  #auth-open.auth-open-btn {
+    padding: 8px 11px;
+  }
+
+  #auth-open.auth-open-btn span {
+    display: none;
+  }
+
+  #auth-logout.auth-logout-btn {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  #auth-dialog .auth-main {
+    padding: 64px 21px 23px;
+  }
+
+  #auth-dialog .auth-switch-line {
+    flex-wrap: wrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #auth-dialog *,
+  #auth-open {
+    transition: none !important;
+  }
+}
+/* RedisCart v2 — giao diện đăng nhập hiện đại, giữ nguyên API FastAPI/Redis */
+.auth-actions {display:flex;align-items:center;flex-shrink:0;margin-left:auto}
+#auth-open[hidden],#auth-user[hidden] {display:none!important}
+#auth-open.auth-open-btn {display:inline-flex;align-items:center;gap:8px;white-space:nowrap;background:#fff;color:#c42b2e;border:1px solid #e8b2b4;border-radius:10px;font-size:13px;font-weight:700;min-height:44px;padding:10px 15px;transition:background .2s,border-color .2s,transform .2s}
+#auth-open.auth-open-btn:hover {background:#fff3f4;border-color:#c42b2e;transform:translateY(-1px)}
+#auth-open.auth-open-btn svg {width:17px;height:17px;stroke-width:1.9}
+.auth-profile {display:flex;align-items:center;gap:10px;max-width:260px}
+.auth-avatar {display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:#fce8e9;color:#b7282e;font-weight:750}
+.auth-profile-name {font-size:12px;font-weight:600;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;max-width:130px}
+#auth-logout.auth-logout-btn {min-height:38px;padding:7px 10px;font-size:12px;color:#555f6e;background:#fff;border:1px solid #d9dfe7;white-space:nowrap}
+#auth-logout.auth-logout-btn:hover {color:#b7282e;background:#fff3f4}
+
+/* Ghi đè dialog mặc định của website, chỉ tác động form xác thực */
+#auth-dialog {position:fixed;top:50%;left:50%;right:auto;bottom:auto;transform:translate(-50%,-50%);margin:0;width:min(870px,calc(100vw - 36px));max-width:none;max-height:min(760px,calc(100dvh - 32px));height:auto;border:0;outline:0;padding:0;border-radius:22px;overflow:auto;color:#1d2330;background:#fff;box-shadow:0 30px 100px #10131d55;font-family:"Be Vietnam Pro",system-ui,sans-serif}
+#auth-dialog::backdrop {background:rgba(13,18,27,.72);backdrop-filter:blur(5px)}
+#auth-dialog .auth-shell {display:grid;grid-template-columns:43% 57%;margin:0;gap:0;align-items:stretch;min-height:560px}
+#auth-dialog .auth-showcase {position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:31px 33px;background:radial-gradient(ellipse at 88% 22%,#6d293b 0,transparent 48%),linear-gradient(145deg,#21222c 0%,#282331 53%,#531c2a 100%);color:#fff}
+#auth-dialog .auth-showcase::before {content:"";position:absolute;z-index:-1;width:330px;height:330px;border-radius:50%;right:-195px;top:130px;border:1px solid #ffffff23;box-shadow:0 0 0 60px #ffffff08,0 0 0 120px #ffffff06}
+#auth-dialog .auth-showcase-top {display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-1px;font-size:23px}
+#auth-dialog .auth-brand-mark {display:grid;place-items:center;width:37px;height:37px;border-radius:10px;background:#df3641}
+#auth-dialog .auth-brand-mark svg {width:26px;height:26px;color:#fff}
+#auth-dialog .auth-brand-name span {color:#f16a76}
+#auth-dialog .auth-showcase-tag {display:inline-flex;gap:9px;align-items:center;padding:7px 11px;border:1px solid #ffffff25;border-radius:40px;background:#ffffff12;color:#f7cbd1;font-size:9px;font-weight:750;letter-spacing:1.2px}
+#auth-dialog .auth-showcase-tag span {width:7px;height:7px;border-radius:50%;background:#fb7185}
+#auth-dialog .auth-showcase-center {margin-top:32px}
+#auth-dialog .auth-showcase h3 {font-size:clamp(23px,2.5vw,31px);line-height:1.4;letter-spacing:-.9px;font-weight:700;margin:17px 0 12px;color:white}
+#auth-dialog .auth-showcase h3 em {font-style:normal;color:#ff9da7}
+#auth-dialog .auth-showcase p {font-size:12px;line-height:1.85;color:#d4ccd4;margin:0;max-width:300px}
+#auth-dialog .auth-illustration {height:190px;position:relative;margin-top:20px}
+#auth-dialog .auth-illustration-glow {position:absolute;left:30px;right:10px;bottom:15px;height:90px;border-radius:50%;background:#e1455675;filter:blur(50px)}
+#auth-dialog .auth-mini-card {position:absolute;display:flex;flex-direction:column;gap:6px;width:178px;height:128px;padding:19px;border-radius:18px;box-shadow:0 15px 38px #12121d66}
+#auth-dialog .auth-mini-card-back {left:9px;top:21px;transform:rotate(-11deg);background:linear-gradient(140deg,#b92d43,#e1616d);color:#fff}
+#auth-dialog .auth-mini-card-back span {font-size:9px;letter-spacing:2px;opacity:.9}
+#auth-dialog .auth-mini-card-back strong {font-size:32px;letter-spacing:-1px}
+#auth-dialog .auth-mini-card-back small {font-size:10px}
+#auth-dialog .auth-mini-card-front {left:97px;top:45px;transform:rotate(9deg);background:#fff;color:#24222a}
+#auth-dialog .auth-mini-icon {display:grid;place-items:center;width:26px;height:26px;border-radius:8px;background:#fff0f1;color:#d02e3f}
+#auth-dialog .auth-mini-card-front strong {font-size:14px}
+#auth-dialog .auth-mini-card-front small {font-size:10px;color:#707481}
+#auth-dialog .auth-mini-bars {display:flex;gap:5px;margin-top:5px}
+#auth-dialog .auth-mini-bars i {display:block;height:5px;width:33px;background:#e94e59;border-radius:4px}
+#auth-dialog .auth-mini-bars i:nth-child(2) {width:23px;background:#f4b4bb}
+#auth-dialog .auth-mini-bars i:nth-child(3) {width:15px;background:#f5d8dc}
+#auth-dialog .auth-showcase-bottom {display:flex;align-items:center;gap:8px;font-size:10px;color:#d0c2cb}
+#auth-dialog .auth-showcase-dot {display:block;background:#f27385;width:6px;height:6px;border-radius:50%}
+
+#auth-dialog .auth-main {position:relative;display:flex;align-items:center;padding:62px 52px;background:#fff;min-width:0}
+#auth-dialog .auth-close {position:absolute;right:24px;top:20px;min-height:36px;width:36px;padding:0;border:0;background:#f2f4f7;border-radius:50%;color:#626b79;font-size:25px;line-height:1;display:grid;place-items:center}
+#auth-dialog .auth-close:hover {color:#c42b2e;background:#ffecef}
+#auth-dialog .auth-content {width:100%;max-width:380px;margin:0 auto}
+#auth-dialog .auth-form-kicker {font-size:10px;letter-spacing:1.6px;color:#bc313c;font-weight:800;margin-bottom:12px}
+#auth-dialog #auth-title {font-size:28px;line-height:1.35;letter-spacing:-.8px;color:#202431;margin:0 0 8px;font-weight:750}
+#auth-dialog #auth-subtitle {color:#7b8290;line-height:1.8;font-size:12px;margin:0 0 27px}
+#auth-dialog #auth-form {display:flex;flex-direction:column;gap:17px}
+#auth-dialog .auth-field {display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:700;color:#313747}
+#auth-dialog .auth-field[hidden] {display:none}
+#auth-dialog .auth-input-wrap {position:relative;display:flex;align-items:center;width:100%}
+#auth-dialog .auth-input-wrap>svg {position:absolute;left:14px;width:18px;height:18px;stroke:#a2a9b4;pointer-events:none}
+#auth-dialog .auth-field input {font:inherit;font-weight:500;min-height:50px;width:100%;border:1px solid #e2e5ea;border-radius:11px;background:#f9fafc;color:#222936;padding:12px 13px 12px 44px;font-size:13px;outline:0;transition:border-color .2s,box-shadow .2s,background .2s}
+#auth-dialog .auth-field input::placeholder {color:#b3b9c2}
+#auth-dialog .auth-field input:focus {background:#fff;border-color:#e36d73;box-shadow:0 0 0 3px #fbe7e8}
+#auth-dialog #auth-password {padding-right:72px}
+#auth-dialog .auth-password-toggle {position:absolute;right:9px;border:0;background:transparent;padding:6px 8px;min-height:32px;color:#bf3440;font-size:11px;font-weight:700}
+#auth-dialog .auth-password-toggle:hover {background:#fff0f2}
+#auth-dialog #auth-error {color:#b42532;background:#fff2f3;border:1px solid #f5c9cf;border-radius:9px;padding:11px 12px;font-size:12px;line-height:1.6;margin:0}
+#auth-dialog #auth-error[hidden] {display:none}
+#auth-dialog #auth-submit {min-height:51px;border-radius:11px;border:1px solid #cc2d39;color:white;background:linear-gradient(105deg,#d83340 0%,#bd2534 100%);box-shadow:0 8px 19px #c6313c30;display:flex;align-items:center;justify-content:center;gap:11px;font-size:14px;font-weight:750;margin-top:3px;transition:transform .18s,box-shadow .18s,filter .18s}
+#auth-dialog #auth-submit:hover {transform:translateY(-1px);filter:brightness(.98);box-shadow:0 11px 23px #c6313c43}
+#auth-dialog #auth-submit:disabled {transform:none;opacity:.65}
+#auth-dialog #auth-submit>span {font-size:20px;font-weight:400;line-height:1}
+#auth-dialog .auth-switch-line {display:flex;justify-content:center;align-items:center;gap:4px;margin:22px 0 0;font-size:12px;color:#777f8e}
+#auth-dialog #auth-switch {min-height:auto;border:0;background:transparent;color:#c42c39;font-size:12px;font-weight:800;padding:5px;border-radius:4px}
+#auth-dialog #auth-switch:hover {text-decoration:underline;background:#fff5f6}
+#auth-dialog .auth-form-footer {margin-top:36px;padding-top:17px;border-top:1px solid #eef0f3;color:#9ca2ae;text-align:center;font-size:10px}
+#auth-dialog .auth-form-footer>span {color:#d03b47}
+
+@media(max-width:950px) { .header-inner {gap:14px} .auth-actions {margin-left:0} }
+@media(max-width:740px) {
+  #auth-dialog {width:min(490px,calc(100vw - 24px));max-height:calc(100dvh - 20px);border-radius:18px}
+  #auth-dialog .auth-shell {display:block;min-height:0}
+  #auth-dialog .auth-showcase {display:none}
+  #auth-dialog .auth-main {padding:68px 28px 31px}
+  #auth-dialog #auth-title {font-size:25px}
+  #auth-dialog .auth-close {right:18px;top:16px}
+}
+@media(max-width:600px) {
+  .auth-actions {order:2;margin-left:auto}
+  .auth-profile-name {display:none}
+  #auth-open.auth-open-btn {padding:8px 11px}
+  #auth-open.auth-open-btn span {display:none}
+  #auth-logout.auth-logout-btn {font-size:11px}
+}
+@media(max-width:420px) {
+  #auth-dialog .auth-main {padding:64px 21px 23px}
+  #auth-dialog .auth-switch-line {flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce) {
+  #auth-dialog *, #auth-open {transition:none!important}
+}
+
+/* V3: icon mat thay cho chu Hien / An */
+#auth-dialog .auth-password-toggle {display:grid;place-items:center;right:5px;padding:0;width:42px;height:42px;border-radius:9px}
+#auth-dialog .auth-password-toggle svg {width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#auth-dialog .auth-password-toggle svg[hidden] {display:none}
+
+/* ========================================
+   REDISCART - ACCOUNT DROPDOWN
+   ======================================== */
+
+header .auth-actions {
+  flex-shrink: 0;
+  margin-left: 0;
+}
+
+header #auth-user.auth-profile {
+  display: flex;
+  position: relative;
+  align-items: center;
+  max-width: none;
+  gap: 0;
+}
+
+header #auth-user[hidden] {
+  display: none !important;
+}
+
+/* Nut tai khoan */
+header #account-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  max-width: 220px;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  color: #1e2533;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+header #account-trigger:hover,
+header #account-trigger[aria-expanded="true"] {
+  background: #f7f8fa;
+  border-color: #e8ebf0;
+}
+
+header #account-trigger .auth-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: #fbe6e8;
+  color: #bf2835;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+header .account-name {
+  min-width: 0;
+}
+
+header #account-trigger #auth-username {
+  display: block;
+  max-width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+  color: #202735;
+}
+
+header .account-arrow {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #8992a2;
+}
+
+header .account-arrow svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+header #account-trigger[aria-expanded="true"]
+.account-arrow {
+  transform: rotate(180deg);
+}
+
+/* Menu xo xuong */
+header #account-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 200;
+  display: block;
+  width: 285px;
+  padding: 8px;
+  border: 1px solid #e9ecf1;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(20, 30, 50, 0.13);
+}
+
+header #account-menu[hidden] {
+  display: none !important;
+}
+
+header .account-menu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 13px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+header .account-menu-label {
+  color: #c72d39;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header #account-menu-name {
+  color: #202735;
+  font-size: 14px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+header #account-menu-email {
+  color: #8490a1;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+header .account-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 0;
+}
+
+header .account-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 42px;
+  padding: 9px 12px;
+  border-radius: 9px;
+  color: #374052;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header .account-menu-link:hover {
+  color: #c32c38;
+  background: #fff2f3;
+}
+
+header .account-menu-link svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+header .account-menu-bottom {
+  border-top: 1px solid #eef0f3;
+  padding-top: 7px;
+}
+
+header #auth-logout.auth-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 12px;
+  margin: 0;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #c32c38;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+header #auth-logout.auth-logout-btn:hover {
+  background: #fff0f1;
+}
+
+@media (max-width: 620px) {
+  header #account-trigger {
+    padding: 4px;
+  }
+
+  header #account-trigger #auth-username,
+  header .account-arrow {
+    display: none;
+  }
+
+  header #account-menu {
+    width: min(285px, calc(100vw - 24px));
+  }
+}

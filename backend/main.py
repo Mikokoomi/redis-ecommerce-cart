@@ -7,9 +7,10 @@ from redis.exceptions import RedisError
 
 from .redis_client import create_redis_client
 from .api import router
-
+from .auth import router as auth_router
 app = FastAPI(title="Redis E-Commerce Cart")
 app.include_router(router)
+app.include_router(auth_router)
 
 
 @app.exception_handler(RedisError)

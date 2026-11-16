@@ -1,37 +1,309 @@
+
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
   <title>RedisCart — Công nghệ cho cuộc sống</title>
-  <link rel="preload" href="/assets/fonts/BeVietnamPro-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=11"><script src="/js/app.js?v=11" defer></script>
+
+  <link rel="preload"
+        href="/assets/fonts/BeVietnamPro-Regular.ttf"
+        as="font"
+        type="font/ttf"
+        crossorigin>
+
+  <!-- CSS và JavaScript website hiện tại -->
+  
+
+<link rel="stylesheet" href="/css/style.css?v=16">
+<script type="module" src="/js/app.js?v=14"></script>
+
+<link rel="stylesheet" href="/css/auth.css?v=4">
+<script src="/js/auth-ui.js?v=4" defer></script>
+
+
 </head>
+
 <body>
+
 <a class="skip" href="#main">Đến nội dung chính</a>
-<header><div class="container header-inner">
-  <a class="brand" href="#catalog" aria-label="RedisCart — Trang sản phẩm"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="m14 2 12 7-12 7L2 9Zm-12 12 12 7 12-7M2 19l12 7 12-7"/></svg>RedisCart<span>.</span></a>
-  <nav class="main-nav" aria-label="Điều hướng chính"><a href="#catalog">Sản phẩm</a><a href="#categories">Danh mục</a></nav>
-  <form id="search-form" role="search"><label class="sr-only" for="search">Tìm kiếm sản phẩm</label><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Tìm sản phẩm bạn cần…" autocomplete="off"><button class="search-submit" type="submit" aria-label="Tìm kiếm">Tìm</button></form>
-  <a class="cart-link" href="#cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2l2.5 12h12L22 7H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>Giỏ hàng</span><b id="count" aria-label="Tổng số lượng">0</b></a>
-</div></header>
+
+<header>
+  <div class="container header-inner">
+
+    <a class="brand" href="#catalog"
+       aria-label="RedisCart — Trang sản phẩm">
+      <svg viewBox="0 0 28 28" aria-hidden="true">
+        <path d="m14 2 12 7-12 7L2 9Zm-12 12 12 7 12-7M2 19l12 7 12-7"/>
+      </svg>
+      RedisCart<span>.</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Điều hướng chính">
+      <a href="#catalog">Sản phẩm</a>
+      <a href="#categories">Danh mục</a>
+    </nav>
+
+    
+    <form id="search-form" role="search">
+      <label class="sr-only" for="search">
+        Tìm kiếm sản phẩm
+      </label>
+
+      <button
+        type="submit"
+        class="search-submit"
+        aria-label="Tìm kiếm sản phẩm"
+        title="Tìm kiếm">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <path d="m16 16 5 5"/>
+        </svg>
+      </button>
+
+      <input
+        id="search"
+        type="search"
+        placeholder="Tìm kiếm sản phẩm..."
+        autocomplete="off">
+    </form>
+
+
+      
+
+    <a class="cart-link" href="#cart">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3 3h2l2.5 12h12L22 7H6"/>
+        <circle cx="9" cy="20" r="1"/>
+        <circle cx="18" cy="20" r="1"/>
+      </svg>
+      <span>Giỏ hàng</span>
+      <b id="count" aria-label="Tổng số lượng">0</b>
+    </a>
+
+    <!-- Nút đăng nhập sẽ được auth-ui.js thêm vào đây -->
+
+  </div>
+</header>
+
 <main id="main" class="container">
-  <div id="message" role="status" aria-live="polite"></div>
+
+  <div id="message"
+       role="status"
+       aria-live="polite"></div>
+
+  <!-- DANH SÁCH SẢN PHẨM -->
   <section id="catalog-view">
-    <div class="intro"><div><p class="eyebrow">Bộ sưu tập công nghệ</p><h1>Thiết bị phù hợp. Mỗi ngày thuận tiện.</h1></div></div>
-    <div class="catalog-toolbar" id="categories"><nav id="filters" aria-label="Lọc theo danh mục"></nav><button id="retry" class="refresh">Tải lại</button></div>
-    <div class="result-bar"><h2 id="catalog-title">Tất cả sản phẩm</h2><span id="result-count" aria-live="polite"></span></div>
-    <div id="products" class="products" aria-busy="true"></div>
+
+    <div class="intro">
+      <div>
+        <p class="eyebrow">Bộ sưu tập công nghệ</p>
+        <h1>Thiết bị phù hợp. Mỗi ngày thuận tiện.</h1>
+      </div>
+    </div>
+
+    <div class="catalog-toolbar" id="categories">
+      <nav id="filters" aria-label="Lọc theo danh mục"></nav>
+      <button id="retry" class="refresh">Tải lại</button>
+    </div>
+
+    <div class="result-bar">
+      <h2 id="catalog-title">Tất cả sản phẩm</h2>
+      <span id="result-count" aria-live="polite"></span>
+    </div>
+
+    <div id="products"
+         class="products"
+         aria-busy="true"></div>
+
   </section>
-  <section id="cart-view" hidden aria-labelledby="cart-heading">
-    <a class="back-link" href="#catalog">← Tiếp tục mua sắm</a>
-    <div class="cart-heading"><div><h1 id="cart-heading" tabindex="-1">Giỏ hàng của bạn</h1><p id="cart-description" class="muted"></p></div><button id="clear" class="clear-button">Xóa giỏ hàng</button></div>
-    <div class="cart-layout"><section class="cart-list" aria-label="Sản phẩm trong giỏ"><div class="list-heading"><span>Sản phẩm</span><span>Thành tiền</span></div><div id="cart-items"></div></section>
-    <aside class="summary"><h2>Tóm tắt đơn hàng</h2><dl><div><dt>Tổng số lượng</dt><dd id="summary-quantity">0</dd></div><div><dt>Tạm tính</dt><dd id="subtotal">0 ₫</dd></div><div class="total"><dt>Tổng tiền</dt><dd id="total">0 ₫</dd></div></dl><button id="checkout-open" class="primary" disabled>Xác nhận mua hàng</button><p>Giỏ hàng được lưu trong 24 giờ kể từ lần thay đổi gần nhất.</p></aside></div>
+
+  <!-- GIỎ HÀNG -->
+  <section id="cart-view"
+           hidden
+           aria-labelledby="cart-heading">
+
+    <a class="back-link" href="#catalog">
+      ← Tiếp tục mua sắm
+    </a>
+
+    <div class="cart-heading">
+      <div>
+        <h1 id="cart-heading" tabindex="-1">
+          Giỏ hàng của bạn
+        </h1>
+        <p id="cart-description" class="muted"></p>
+      </div>
+
+      <button id="clear" class="clear-button">
+        Xóa giỏ hàng
+      </button>
+    </div>
+
+    <div class="cart-layout">
+
+      <section class="cart-list"
+               aria-label="Sản phẩm trong giỏ">
+
+        <div class="list-heading">
+          <span>Sản phẩm</span>
+          <span>Thành tiền</span>
+        </div>
+
+        <div id="cart-items"></div>
+
+      </section>
+
+      <aside class="summary">
+
+        <h2>Tóm tắt đơn hàng</h2>
+
+        <dl>
+          <div>
+            <dt>Tổng số lượng</dt>
+            <dd id="summary-quantity">0</dd>
+          </div>
+
+          <div>
+            <dt>Tạm tính</dt>
+            <dd id="subtotal">0 ₫</dd>
+          </div>
+
+          <div class="total">
+            <dt>Tổng tiền</dt>
+            <dd id="total">0 ₫</dd>
+          </div>
+        </dl>
+
+        <button id="checkout-open"
+                class="primary"
+                disabled>
+          Xác nhận mua hàng
+        </button>
+
+        <p>
+          Giỏ hàng được lưu trong 24 giờ kể từ
+          lần thay đổi gần nhất.
+        </p>
+
+      </aside>
+    </div>
+
   </section>
-  <section id="detail-view" hidden><a class="back-link" href="#catalog">← Quay lại danh sách sản phẩm</a><div id="detail-content" class="detail-layout"></div></section>
-  <section id="checkout-view" hidden><a class="back-link" href="#cart">← Quay lại giỏ hàng</a><div class="checkout-panel"><h1>Xác nhận mua hàng</h1><p class="checkout-notice">Xác nhận đơn hàng sẽ cập nhật số lượng tồn kho. Không thu tiền trực tuyến.</p><div id="checkout-review"></div><button id="checkout-confirm" class="primary">Xác nhận mua hàng</button><a href="#cart" class="button secondary-button">Quay lại giỏ hàng</a></div></section>
-  <section id="order-view" hidden><div id="order-content" class="checkout-panel"></div></section>
+
+  
+<!-- CHI TIẾT SẢN PHẨM -->
+<section id="detail-view" hidden>
+  <div id="detail-content" class="detail-layout"></div>
+</section>
+
+
+  <!-- XÁC NHẬN MUA HÀNG -->
+  <section id="checkout-view" hidden>
+
+    <a class="back-link" href="#cart">
+      ← Quay lại giỏ hàng
+    </a>
+
+    <div class="checkout-panel">
+
+      <h1>Xác nhận mua hàng</h1>
+
+      <p class="checkout-notice">
+        Xác nhận đơn hàng sẽ cập nhật số lượng tồn kho.
+        Không thu tiền trực tuyến.
+      </p>
+
+      <div id="checkout-review"></div>
+
+      <button id="checkout-confirm" class="primary">
+        Xác nhận mua hàng
+      </button>
+
+      <a href="#cart" class="button secondary-button">
+        Quay lại giỏ hàng
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CHI TIẾT ĐƠN HÀNG -->
+  <section id="order-view" hidden>
+    <div id="order-content" class="checkout-panel"></div>
+  </section>
+
 </main>
-<footer><div class="container"><a href="#catalog" class="brand">RedisCart<span>.</span></a><p>Thiết bị công nghệ, lựa chọn rõ ràng.</p></div></footer>
-<dialog id="clear-dialog" aria-labelledby="dialog-title"><h2 id="dialog-title">Xóa toàn bộ giỏ hàng?</h2><p>Các sản phẩm trong giỏ này sẽ được gỡ bỏ.</p><div><button id="cancel-clear" autofocus>Giữ giỏ hàng</button><button id="confirm-clear" class="primary">Xóa giỏ hàng</button></div></dialog>
-</body></html>
+
+
+<footer class="store-footer">
+
+  <div class="container store-footer-grid">
+
+    <div class="store-footer-brand">
+      <a href="#catalog" class="brand">
+        RedisCart<span>.</span>
+      </a>
+
+      <p>
+        Khám phá các sản phẩm công nghệ
+        và trải nghiệm mua sắm trực tuyến
+        đơn giản, thuận tiện.
+      </p>
+    </div>
+
+    <div class="store-footer-column">
+      <h3>Khám phá</h3>
+      <a href="#catalog">Tất cả sản phẩm</a>
+      <a href="#categories">Danh mục sản phẩm</a>
+    </div>
+
+    <div class="store-footer-column">
+      <h3>Tài khoản &amp; mua sắm</h3>
+      <a href="#cart">Giỏ hàng của tôi</a>
+      <a href="#catalog">Tiếp tục mua sắm</a>
+    </div>
+
+    <div class="store-footer-column">
+      <h3>Thông tin hệ thống</h3>
+      <p>Ứng dụng thương mại điện tử mô phỏng.</p>
+      <p>Giỏ hàng được quản lý bằng Redis.</p>
+      <p>Không hỗ trợ thanh toán trực tuyến.</p>
+    </div>
+
+  </div>
+
+  <div class="container store-footer-bottom">
+    <span>© 2026 RedisCart</span>
+    <span>Ứng dụng phục vụ đồ án học phần NoSQL</span>
+  </div>
+
+</footer>
+
+
+<!-- XÁC NHẬN XÓA GIỎ HÀNG -->
+<dialog id="clear-dialog"
+        aria-labelledby="dialog-title">
+
+  <h2 id="dialog-title">
+    Xóa toàn bộ giỏ hàng?
+  </h2>
+
+  <p>
+    Các sản phẩm trong giỏ này sẽ được gỡ bỏ.
+  </p>
+
+  <div>
+    <button id="cancel-clear" autofocus>
+      Giữ giỏ hàng
+    </button>
+
+    <button id="confirm-clear" class="primary">
+      Xóa giỏ hàng
+    </button>
+  </div>
+
+</dialog>
+
+</body>
+</html>

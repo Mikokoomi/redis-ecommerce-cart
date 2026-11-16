@@ -51,11 +51,28 @@ class CheckoutRequest(BaseModel):
     idempotency_key: str = Field(min_length=8, max_length=128, pattern=r"^[a-zA-Z0-9_-]+$")
     confirmed: Literal[True]
 
+class BuyNowRequest(CheckoutRequest):
+    product_id: str = Field(pattern=r"^SP[0-9]{3}$")
+    quantity: int = Field(ge=1, le=99, strict=True)
 
 @router.post("/cart/{user_id}/checkout")
 def confirm_checkout(user_id: str, request: CheckoutRequest, db=Depends(database)):
     return checkout(db, user_id, request.idempotency_key)
-
+@router.post("/cart/{user_id}/buy-now")
+def confirm_buy_now(
+    user_id: str,
+    request: BuyNowRequest,
+    db=Depends(database)
+):
+    return checkout(
+        db,
+        user_id,
+        request.idempotency_key,
+        direct_item={
+            "product_id": request.product_id,
+            "quantity": request.quantity
+        }
+    )
 
 @router.get("/cart/{user_id}/orders/{order_id}")
 def order_detail(user_id: str, order_id: str, db=Depends(database)):
@@ -90,6 +107,23 @@ def mutate(db, user_id, pid, quantity, increment=False):
                 else:
                     pipe.hdel(key, pid)
                 pipe.expire(key, CART_TTL_SECONDS)
+
+                pipe.xadd(
+                    "events:cart",
+                    {
+                        "action": (
+                            "remove" if amount == 0
+                            else "add" if increment
+                            else "update"
+                        ),
+                        "user_id": user_id,
+                        "product_id": pid,
+                        "quantity": str(amount)
+                    },
+                    maxlen=1000,
+                    approximate=True
+                )
+
                 pipe.execute()
                 return cart(db, user_id)
             except WatchError:
